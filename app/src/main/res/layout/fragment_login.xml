@@ -42,15 +42,25 @@
             android:inputType="textEmailAddress"
             android:padding="12dp" />
 
-        <EditText
-            android:id="@+id/editTextContraseña"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginBottom="24dp"
-            android:background="#DDDDDD"
-            android:hint="Contraseña"
-            android:inputType="textPassword"
-            android:padding="12dp" />
+            android:layout_marginBottom="16dp"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:endIconMode="password_toggle"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextContraseña"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#DDDDDD"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/buttonLogin"
