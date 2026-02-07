@@ -93,6 +93,16 @@
                 android:padding="12dp" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:id="@+id/textViewRequisitos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="22dp"
+            android:text="*Su contraseña debe contener 7 caracteres o más"
+            android:textColor="#B5B0AE"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
         <Button
             android:id="@+id/buttonConfirmar"
             android:layout_width="match_parent"
