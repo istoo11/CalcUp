@@ -1,5 +1,6 @@
 package com.example.calcup.Fragments
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
@@ -9,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.calcup.Activity.MainActivity
 import com.example.calcup.R
 import io.github.jan.supabase.auth.auth
 import io.github.jan.supabase.auth.providers.builtin.Email
@@ -34,7 +36,9 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                         password = contraseña
                     }
                     Toast.makeText(requireContext(), "Login Correcto", Toast.LENGTH_LONG).show()
-                    // Aqui sigue el codigo de la APP
+                    val intent = Intent(requireActivity(), com.example.calcup.Activity.MainActivity::class.java)
+                    startActivity(intent)
+                    activity?.finish()
                 } catch (e: Exception) {
                     e.printStackTrace()
                     Toast.makeText(requireContext(), "Comprueba las credenciales o crea una cuenta", Toast.LENGTH_LONG).show()
