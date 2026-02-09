@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Niveles">
+    tools:context=".Fragments.Niveles">
 
     <GridLayout
-        android:id="@+id/grid_main"
+        android:id="@+id/gridBotones"
         android:layout_width="338dp"
         android:layout_height="545dp"
         android:layout_marginStart="35dp"
