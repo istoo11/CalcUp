@@ -10,22 +10,13 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
 import androidx.navigation.fragment.findNavController
 import com.example.calcup.Objetos.ClienteSupabase
+import com.example.calcup.Objetos.Usuario
 import com.example.calcup.R
 import io.github.jan.supabase.auth.auth
 import io.github.jan.supabase.auth.providers.builtin.Email
 import io.github.jan.supabase.postgrest.from
-import kotlinx.serialization.Serializable
 
 val supabase = ClienteSupabase.supabase
-
-@Serializable
-data class Usuario(
-    val id: String,
-    val usuario: String,
-    val email: String,
-    val puntos: Int,
-    val nivel: Int
-)
 
 class CrearCuentaFragment : Fragment(R.layout.fragment_crear_cuenta) {
 
@@ -62,7 +53,7 @@ class CrearCuentaFragment : Fragment(R.layout.fragment_crear_cuenta) {
                     }
 
                     if (creado != null) {
-                        val usuario = Usuario(creado.id,nickname,creado.email.toString(),0,1)
+                        val usuario = Usuario(creado.id, nickname, creado.email.toString(), 0, 1)
                         ClienteSupabase.supabase.from("usuarios").insert(usuario)
                         Toast.makeText(requireContext(), "Usuario creado correctamente", Toast.LENGTH_SHORT).show()
                         findNavController().popBackStack()
