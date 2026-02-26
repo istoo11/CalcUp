@@ -15,22 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalcUp">
         <activity
-            android:name=".Activity.ui.theme.MainActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/Theme.CalcUp" />
-        <activity
-            android:name=".Activity.MainActivity2"
-            android:exported="false"
-            android:label="@string/title_activity_main2"
-            android:theme="@style/Theme.CalcUp" />
-        <activity
             android:name=".Activity.LoginMainActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
