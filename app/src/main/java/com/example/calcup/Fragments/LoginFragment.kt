@@ -27,12 +27,12 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         val botonLogin = view.findViewById<Button>(R.id.buttonLogin)
         botonLogin.setOnClickListener {
             val correo = view.findViewById<EditText>(R.id.editTextEmail).text.toString().trim()
-            val contraseña = view.findViewById<EditText>(R.id.editTextContraseña).text.toString().trim()
+            val contrasena = view.findViewById<EditText>(R.id.editTextContraseña).text.toString().trim()
             lifecycleScope.launch {
                 try {
                     supabase.auth.signInWith(Email) {
                         email = correo
-                        password = contraseña
+                        password = contrasena
                     }
                     Toast.makeText(requireContext(), "Login Correcto", Toast.LENGTH_LONG).show()
                     val intent = Intent(requireActivity(), com.example.calcup.Activity.MainActivity::class.java)

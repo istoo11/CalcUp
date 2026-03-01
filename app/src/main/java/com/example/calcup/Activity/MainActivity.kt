@@ -90,7 +90,7 @@ class MainActivity : AppCompatActivity() {
                 }.decodeSingle<Usuario>()
 
                 tvNombre.text = response.usuario
-                tvPuntos.text = "${response.puntos} Pts"
+                tvPuntos.text = "${response.puntos} Puntos"
 
             } catch (e: Exception) {
                 Log.e("SupabaseError", "Fallo al cargar cabecera: ${e.message}")
