@@ -4,4 +4,7 @@
     <string name="title_activity_main2">MainActivity2</string>
     <string name="navigation_drawer_open">Se abre el menu</string>
     <string name="navigation_drawer_close">Se cierra el menu</string>
+    <string name="play">▶</string>
+    <string name="descripcion_del_nivel">Descripción del nivel</string>
+    <string name="nivel_X">Nivel X</string>
 </resources>

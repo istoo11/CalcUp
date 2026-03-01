@@ -48,10 +48,10 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_inventario -> {
-                    // Aquí puedes usar findNavController().navigate(R.id.tu_fragment_inventario)
+                    // Codigo para ir al inventario
                 }
                 R.id.nav_tienda -> {
-                    // Lógica para ir a la tienda
+                    // Codigo para ir a la tienda
                 }
                 R.id.nav_cerrar_sesion-> {
                     lifecycleScope.launch {

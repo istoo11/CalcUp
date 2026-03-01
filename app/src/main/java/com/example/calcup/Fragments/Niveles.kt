@@ -66,19 +66,17 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
                         txtDesc.text = nivel.descripcion
 
                         if (nivel.desbloqueado) {
+                            btn.isEnabled = true
                             if(nivel.nivel<=10){
                                 fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_facil)
-                                btn.isEnabled = true
                             }else if(nivel.nivel<=20){
                                 fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_intermedio)
-                                btn.isEnabled = true
                             }else{
                                 fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_dificil)
-                                btn.isEnabled = true
                             }
                         } else {
-                            fila.setBackgroundResource(R.drawable.estilo_botones_bloqueados)
                             btn.isEnabled = false
+                            fila.setBackgroundResource(R.drawable.estilo_botones_bloqueados)
                         }
 
                         return viewItem
