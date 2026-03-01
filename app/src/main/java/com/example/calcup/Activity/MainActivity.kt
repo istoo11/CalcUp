@@ -1,13 +1,26 @@
 package com.example.calcup.Activity
 
 import android.os.Bundle
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import com.example.calcup.R
+import com.google.android.material.navigation.NavigationView
+import androidx.lifecycle.lifecycleScope
+import com.example.calcup.Objetos.ClienteSupabase
+import io.github.jan.supabase.auth.auth
+import kotlinx.coroutines.launch
+import android.content.Intent
+import android.util.Log
+import android.widget.TextView
+import com.example.calcup.Objetos.Usuario
+import io.github.jan.supabase.postgrest.from
 
+val supabase = ClienteSupabase.supabase
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +31,70 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+
+        val drawerLayout: DrawerLayout = findViewById(R.id.main)
+        val navView: NavigationView = findViewById(R.id.nav_listaNivel)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+
+        setSupportActionBar(toolbar)
+        supportActionBar?.title = "MI APLICACIÓN TFG"
+
+        val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+        cargarDatosMenuLateral()
+
+        navView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.nav_inventario -> {
+                    // Aquí puedes usar findNavController().navigate(R.id.tu_fragment_inventario)
+                }
+                R.id.nav_tienda -> {
+                    // Lógica para ir a la tienda
+                }
+                R.id.nav_cerrar_sesion-> {
+                    lifecycleScope.launch {
+                        try {
+                            supabase.auth.signOut()
+                            val intent = Intent(this@MainActivity, LoginMainActivity::class.java)
+                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            startActivity(intent)
+                            finish()
+                        } catch (e: Exception) {
+                            print(e)
+                        }
+                    }
+                }
+            }
+            drawerLayout.closeDrawers()
+            true
+        }
+    }
+
+    private fun cargarDatosMenuLateral() {
+        val navView: NavigationView = findViewById(R.id.nav_listaNivel)
+        val headerView = navView.getHeaderView(0)
+
+        val tvNombre = headerView.findViewById<TextView>(R.id.textView_nombre)
+        val tvPuntos = headerView.findViewById<TextView>(R.id.textView_puntos)
+
+        lifecycleScope.launch {
+            try {
+                val uuid = supabase.auth.currentUserOrNull()!!.id
+
+                val response = supabase.from("usuarios").select {
+                    filter {
+                        eq("id", uuid)
+                    }
+                }.decodeSingle<Usuario>()
+
+                tvNombre.text = response.usuario
+                tvPuntos.text = "${response.puntos} Pts"
+
+            } catch (e: Exception) {
+                Log.e("SupabaseError", "Fallo al cargar cabecera: ${e.message}")
+            }
         }
     }
 }

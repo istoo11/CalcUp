@@ -71,10 +71,15 @@ dependencies {
     implementation("io.github.jan-tennert.supabase:auth-kt")
     implementation("io.github.jan-tennert.supabase:realtime-kt")
     implementation("io.ktor:ktor-client-android:3.4.0")
-    implementation("com.google.android.material:material:1.11.0")
-    implementation("com.google.code.gson:gson:2.10.1")
+
+    implementation("com.google.android.material:material:1.13.0")
+    implementation("com.google.code.gson:gson:2.13.2")
+    implementation("com.google.android.material:material:1.13.0")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.9.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.9.7")
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
 }

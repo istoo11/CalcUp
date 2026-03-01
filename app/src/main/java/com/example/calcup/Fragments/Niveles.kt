@@ -43,15 +43,11 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
                     .bufferedReader()
                     .use { it.readText() }
 
-                val listType = object : TypeToken<List<NivelJson>>() {}.type
-                val nivelesJson: List<NivelJson> = Gson().fromJson(json, listType)
+                val listType = object : TypeToken<List<NivelUI>>() {}.type
+                val nivelesUI: List<NivelUI> = Gson().fromJson(json, listType)
 
-                val nivelesUI = nivelesJson.map { nivelJson ->
-                    NivelUI(
-                        nivel = nivelJson.nivel,
-                        descripcion = nivelJson.descripcion,
-                        desbloqueado = nivelJson.nivel <= nivelUsuario
-                    )
+                nivelesUI.forEach { nivelUI ->
+                    nivelUI.desbloqueado = nivelUI.nivel <= nivelUsuario
                 }
 
                 listaNiveles.adapter = object : ArrayAdapter<NivelUI>(requireContext(), 0, nivelesUI) {
@@ -70,8 +66,16 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
                         txtDesc.text = nivel.descripcion
 
                         if (nivel.desbloqueado) {
-                            fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados)
-                            btn.isEnabled = true
+                            if(nivel.nivel<=10){
+                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_facil)
+                                btn.isEnabled = true
+                            }else if(nivel.nivel<=20){
+                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_intermedio)
+                                btn.isEnabled = true
+                            }else{
+                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_dificil)
+                                btn.isEnabled = true
+                            }
                         } else {
                             fila.setBackgroundResource(R.drawable.estilo_botones_bloqueados)
                             btn.isEnabled = false
