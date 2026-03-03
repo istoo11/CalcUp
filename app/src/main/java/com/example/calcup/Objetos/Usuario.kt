@@ -9,4 +9,5 @@ data class Usuario(
     val email: String,
     val puntos: Int,
     val nivel: Int,
+    val id_icono: Int,
 )

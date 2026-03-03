@@ -9,5 +9,14 @@
         android:id="@+id/niveles"
         android:name="com.example.calcup.Fragments.Niveles"
         android:label="fragment_niveles"
-        tools:layout="@layout/fragment_niveles" />
+        tools:layout="@layout/fragment_niveles" >
+        <action
+            android:id="@+id/action_niveles_to_consejo1"
+            app:destination="@id/consejo1" />
+    </fragment>
+    <fragment
+        android:id="@+id/consejo1"
+        android:name="com.example.calcup.Fragments.Consejo1"
+        android:label="fragment_consejo1"
+        tools:layout="@layout/fragment_consejo1" />
 </navigation>

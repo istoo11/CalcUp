@@ -53,7 +53,7 @@ class CrearCuentaFragment : Fragment(R.layout.fragment_crear_cuenta) {
                     }
 
                     if (creado != null) {
-                        val usuario = Usuario(creado.id, nickname, creado.email.toString(), 0, 1)
+                        val usuario = Usuario(creado.id, nickname, creado.email.toString(), 0, 1,0)
                         ClienteSupabase.supabase.from("usuarios").insert(usuario)
                         Toast.makeText(requireContext(), "Usuario creado correctamente", Toast.LENGTH_SHORT).show()
                         findNavController().popBackStack()

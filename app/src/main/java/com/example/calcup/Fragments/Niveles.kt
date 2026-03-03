@@ -9,16 +9,18 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.ListView
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import com.example.calcup.R
 import io.github.jan.supabase.auth.auth
 import io.github.jan.supabase.postgrest.from
 import com.google.gson.Gson
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.launch
 import com.example.calcup.Objetos.*
 import com.example.calcup.Objetos.Usuario
-import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflect.TypeToken
+import com.google.gson.reflect.TypeToken
 
 
 class Niveles : Fragment(R.layout.fragment_niveles) {
@@ -77,6 +79,12 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
                         } else {
                             btn.isEnabled = false
                             fila.setBackgroundResource(R.drawable.estilo_botones_bloqueados)
+                        }
+
+                        btn.setOnClickListener {
+                            val bundle = bundleOf("numeroNivel" to nivel.nivel)
+
+                            findNavController().navigate(R.id.action_niveles_to_consejo1, bundle)
                         }
 
                         return viewItem
