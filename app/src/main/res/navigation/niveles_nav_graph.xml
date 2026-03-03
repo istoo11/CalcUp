@@ -16,7 +16,22 @@
     </fragment>
     <fragment
         android:id="@+id/consejo1"
-        android:name="com.example.calcup.Fragments.Consejo1"
+        android:name="com.example.calcup.Fragments.Consejo"
         android:label="fragment_consejo1"
-        tools:layout="@layout/fragment_consejo1" />
+        tools:layout="@layout/fragment_consejo" >
+        <action
+            android:id="@+id/action_consejo1_to_ejericicio01"
+            app:destination="@id/ejericicio01"
+            app:popUpTo="@id/niveles"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejericicio01"
+        android:name="com.example.calcup.Fragments.Ejericicio01"
+        android:label="fragment_ejericicio01"
+        tools:layout="@layout/fragment_ejericicio01" >
+        <action
+            android:id="@+id/action_ejericicio01_to_niveles"
+            app:destination="@id/niveles" />
+    </fragment>
 </navigation>

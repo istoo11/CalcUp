@@ -31,8 +31,10 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             lifecycleScope.launch {
                 try {
                     supabase.auth.signInWith(Email) {
-                        email = correo
-                        password = contrasena
+                        email = "Romansami40@gmail.com"
+                        password = "Pecalino12"
+                        //email = correo
+                        //password = contrasena
                     }
                     Toast.makeText(requireContext(), "Login Correcto", Toast.LENGTH_LONG).show()
                     val intent = Intent(requireActivity(), com.example.calcup.Activity.MainActivity::class.java)

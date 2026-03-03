@@ -1,7 +1,10 @@
 package com.example.calcup.Objetos
 
-class NivelUI (
+import java.io.Serializable
+
+data class NivelUI(
     val nivel: Int,
     val descripcion: String,
-    var desbloqueado: Boolean = false
-)
+    var desbloqueado: Boolean = false,
+    val consejos: List<String>,
+) : Serializable

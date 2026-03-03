@@ -19,7 +19,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.launch
 import com.example.calcup.Objetos.*
-import com.example.calcup.Objetos.Usuario
 import com.google.gson.reflect.TypeToken
 
 
@@ -31,8 +30,7 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
         val listaNiveles = view.findViewById<ListView>(R.id.listViewNiveles)
         viewLifecycleOwner.lifecycleScope.launch {
             try {
-                val user = supabase.auth.retrieveUserForCurrentSession()
-                val uuid = user.id
+                val uuid = supabase.auth.retrieveUserForCurrentSession().id
                 val response = supabase.from("usuarios").select {
                     filter {
                         eq("id", uuid)
@@ -41,18 +39,22 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
                 val nivelUsuario = response.nivel
 
                 val json = requireContext().assets
-                    .open("PlatillaNiveles.json")
+                    //.open("PlatillaNiveles.json")
+                    .open("PlatillaNivelesPruebas.json")
                     .bufferedReader()
                     .use { it.readText() }
 
-                val listType = object : TypeToken<List<NivelUI>>() {}.type
-                val nivelesUI: List<NivelUI> = Gson().fromJson(json, listType)
+                val listType = object : TypeToken<List<NivelUIPruebas>>() {}.type
+                val nivelesUI: List<NivelUIPruebas> = Gson().fromJson(json, listType)
+                //val listType = object : TypeToken<List<NivelUI>>() {}.type
+                //val nivelesUI: List<NivelUI> = Gson().fromJson(json, listType)
 
                 nivelesUI.forEach { nivelUI ->
                     nivelUI.desbloqueado = nivelUI.nivel <= nivelUsuario
                 }
 
-                listaNiveles.adapter = object : ArrayAdapter<NivelUI>(requireContext(), 0, nivelesUI) {
+                //listaNiveles.adapter = object : ArrayAdapter<NivelUI>(requireContext(), 0, nivelesUI) {
+                listaNiveles.adapter = object : ArrayAdapter<NivelUIPruebas>(requireContext(), 0, nivelesUI) {
                     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                         val viewItem = convertView ?: LayoutInflater.from(context)
                             .inflate(R.layout.nivel, parent, false)
@@ -82,7 +84,7 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
                         }
 
                         btn.setOnClickListener {
-                            val bundle = bundleOf("numeroNivel" to nivel.nivel)
+                            val bundle = bundleOf("infoNivel" to nivel)
 
                             findNavController().navigate(R.id.action_niveles_to_consejo1, bundle)
                         }
