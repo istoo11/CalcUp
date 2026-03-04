@@ -42,6 +42,20 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:headerLayout="@layout/cabecera"
-        app:menu="@menu/menu" />
+        app:menu="@menu/menu">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="16dp">
+            <Button
+                android:id="@+id/btn_cerrar_sesion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cerrar_sesion"
+                android:paddingBottom="16dp"/>
+        </FrameLayout>
+
+    </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>

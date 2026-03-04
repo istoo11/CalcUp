@@ -3,6 +3,7 @@ package com.example.calcup.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = findViewById(R.id.main)
         val navView: NavigationView = findViewById(R.id.nav_listaNivel)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
+        val btnCerrarSesion = findViewById<Button>(R.id.btn_cerrar_sesion)
 
         setSupportActionBar(toolbar)
         supportActionBar?.title = "MI APLICACIÓN TFG"
@@ -54,22 +56,23 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_tienda -> {
                     // Codigo para ir a la tienda
                 }
-                R.id.nav_cerrar_sesion-> {
-                    lifecycleScope.launch {
-                        try {
-                            supabase.auth.signOut()
-                            val intent = Intent(this@MainActivity, LoginMainActivity::class.java)
-                            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                            startActivity(intent)
-                            finish()
-                        } catch (e: Exception) {
-                            print(e)
-                        }
-                    }
-                }
             }
             drawerLayout.closeDrawers()
             true
+        }
+
+        btnCerrarSesion.setOnClickListener {
+            lifecycleScope.launch {
+                try {
+                    supabase.auth.signOut()
+                    val intent = Intent(this@MainActivity, LoginMainActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    finish()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            }
         }
     }
 

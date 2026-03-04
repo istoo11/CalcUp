@@ -31,7 +31,19 @@
         android:label="fragment_ejericicio01"
         tools:layout="@layout/fragment_ejericicio01" >
         <action
-            android:id="@+id/action_ejericicio01_to_niveles"
-            app:destination="@id/niveles" />
+            android:id="@+id/action_ejericicio01_to_ejercicio02"
+            app:destination="@id/ejercicio02"
+            app:popUpTo="@id/ejericicio01" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejercicio02"
+        android:name="com.example.calcup.Fragments.ejercicio02"
+        android:label="fragment_ejercicio02"
+        tools:layout="@layout/fragment_ejercicio02" >
+        <action
+            android:id="@+id/action_ejercicio02_to_niveles"
+            app:destination="@id/niveles"
+            app:popUpTo="@id/niveles"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

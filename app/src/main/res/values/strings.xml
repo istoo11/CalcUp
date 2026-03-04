@@ -7,4 +7,10 @@
     <string name="play">▶</string>
     <string name="descripcion_del_nivel">Descripción del nivel</string>
     <string name="nivel_X">Nivel X</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="comprobar">COMPROBAR</string>
+    <string name="siguiente">SIGUIENTE</string>
+    <string name="consejos_para_el_nivel">CONSEJOS PARA EL NIVEL</string>
+    <string name="resuelve_la_siguiente_operaci_n_matematica">RESUELVE LA SIGUIENTE OPERACIÓN MATEMATICA</string>
+    <string name="continua_la_serie">CONTINUA LA SERIE</string>
 </resources>

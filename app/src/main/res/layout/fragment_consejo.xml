@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:text="CONSEJOS PARA EL NIVEL"
+        android:text="@string/consejos_para_el_nivel"
         android:textColor="#6A4D8B"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -57,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:backgroundTint="#6A4D8B"
-        android:text="ATRÁS"
+        android:text="@string/siguiente"
         android:textColor="#FFFFFF"
         android:layout_marginTop="10dp"
         app:cornerRadius="8dp" />

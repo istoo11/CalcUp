@@ -55,8 +55,8 @@
       "Para los problemas de reparto, piensa en grupos iguales.",
       "¡No te asustes con números más altos! Mantén la calma y usa el cálculo mental."
     ],
-    "EJ01": ["5+5+5", "2x3", "10+10-5", "2x5", "25+25"],
-    "SolucionEJ01": ["15", "6", "15", "10", "50"],
+    "EJ01": ["3x5", "2x3", "3x10", "2x5", "2x25"],
+    "SolucionEJ01": ["15", "6", "30", "10", "50"],
     "EJ02": ["2, 4, 8, 16, X", "3, 6, 12, 24, X", "100, 90, 80, 70, X", "5, 15, 25, 35, X", "11, 22, 33, 44, X"],
     "SolucionEJ02": ["32", "48", "60", "45", "55"],
     "EJ03": [
@@ -67,5 +67,28 @@
       "Tengo 3 cajas con 5 bombones cada una, ¿cuántos hay en total?"
     ],
     "SolucionEJ03": ["8", "10", "8", "20", "15"]
+  },
+  {
+    "nivel": 4,
+    "descripcion": "¡Explorando bajo cero!",
+    "consejos": [
+      "Cuando restas un número grande a uno pequeño, el resultado siempre será negativo.",
+      "Imagina un termómetro: si estás a 2 grados y bajan 5, acabarás bajo cero.",
+      "El signo menos (-) es fundamental; no te olvides de ponerlo delante del resultado.",
+      "Piensa en deudas: si tienes 3 euros pero debes 10, te quedan -7 euros.",
+      "Visualiza una recta numérica: si te mueves hacia la izquierda desde el cero, entras en terreno negativo."
+    ],
+    "EJ01": ["1-2", "3-5", "2-8", "5-10", "4-9"],
+    "SolucionEJ01": ["-1", "-2", "-6", "-5", "-5"],
+    "EJ02": ["10, 5, 0, X", "2, 1, 0, X", "6, 3, 0, X", "12, 8, 4, 0, X", "0, -2, -4, X"],
+    "SolucionEJ02": ["-5", "-1", "-3", "-4", "-6"],
+    "EJ03": [
+      "Tengo 2 euros y quiero comprar un juguete de 5, ¿cuánto dinero me falta?",
+      "Un ascensor está en el piso 1 y baja 3 plantas, ¿en qué piso acaba?",
+      "Si el termómetro marca 3 grados y la temperatura baja 7, ¿cuántos grados hace?",
+      "Tengo una caja con 5 manzanas y me piden 12, ¿cuántas quedo debiendo?",
+      "Un buzo está a 2 metros sobre el nivel del mar y baja 10 metros, ¿a qué profundidad llega?"
+    ],
+    "SolucionEJ03": ["-3", "-2", "-4", "-7", "-8"]
   }
 ]
