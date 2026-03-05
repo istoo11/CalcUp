@@ -36,9 +36,9 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                         //email = correo
                         //password = contrasena
                     }
-                    Toast.makeText(requireContext(), "Login Correcto", Toast.LENGTH_LONG).show()
                     val intent = Intent(requireActivity(), com.example.calcup.Activity.MainActivity::class.java)
                     startActivity(intent)
+                    Toast.makeText(requireContext(), "Login Correcto", Toast.LENGTH_SHORT).show()
                     activity?.finish()
                 } catch (e: Exception) {
                     e.printStackTrace()

@@ -21,6 +21,8 @@ import com.google.android.material.navigation.NavigationView
 import io.github.jan.supabase.auth.auth
 import io.github.jan.supabase.postgrest.from
 import kotlinx.coroutines.launch
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 
 val supabase = ClienteSupabase.supabase
 class MainActivity : AppCompatActivity() {
@@ -39,6 +41,9 @@ class MainActivity : AppCompatActivity() {
         val navView: NavigationView = findViewById(R.id.nav_listaNivel)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         val btnCerrarSesion = findViewById<Button>(R.id.btn_cerrar_sesion)
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        val navGraph = navHostFragment.navController
 
         setSupportActionBar(toolbar)
         supportActionBar?.title = "MI APLICACIÓN TFG"
@@ -50,11 +55,23 @@ class MainActivity : AppCompatActivity() {
 
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
+                R.id.nav_niveles -> {
+                    if(navGraph.currentDestination?.id != R.id.niveles) {
+                        if(navGraph.currentDestination?.id == R.id.tienda){
+                            navGraph.navigate(R.id.action_tienda_to_niveles)
+                        }
+
+                    }
+                }
                 R.id.nav_inventario -> {
-                    // Codigo para ir al inventario
+
                 }
                 R.id.nav_tienda -> {
-                    // Codigo para ir a la tienda
+                    if(navGraph.currentDestination?.id != R.id.tienda) {
+                        if(navGraph.currentDestination?.id == R.id.niveles){
+                            navGraph.navigate(R.id.action_niveles_to_tienda)
+                        }
+                    }
                 }
             }
             drawerLayout.closeDrawers()

@@ -2,6 +2,7 @@ package com.example.calcup.Objetos
 
 import java.io.Serializable
 
+
 data class NivelUIPruebas(
     val nivel: Int,
     val descripcion: String,
