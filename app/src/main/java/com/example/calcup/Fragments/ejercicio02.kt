@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.calcup.Objetos.NivelUIPruebas
@@ -59,35 +60,8 @@ class ejercicio02 : Fragment(R.layout.fragment_ejercicio02) {
                 val botonSeleccionado = view.findViewById<MaterialButton>(checkedId)
                 val valorSeleccionado = botonSeleccionado.text.toString()
                 if (valorSeleccionado == solucion) {
-
-
-
-
-                    val fechaFin = java.time.LocalDateTime.now().toString()
-                    viewLifecycleOwner.lifecycleScope.launch {
-                        val idUsuario = supabase.auth.retrieveUserForCurrentSession().id
-                        try {
-                            supabase.from("Laderboard").update(mapOf("fin" to fechaFin)) {
-                                filter {
-                                    eq("id_usuario", idUsuario)
-                                    eq("id_nivel", infoNivel.nivel)
-                                }
-                            }
-                            val usuario = supabase.from("usuarios").select {
-                                    filter { eq("id", idUsuario) }
-                                }.decodeSingle<Usuario>()
-                            if(usuario.nivel == infoNivel.nivel) {
-                                supabase.from("usuarios").update(mapOf("nivel" to usuario.nivel+1)) {
-                                    filter {
-                                        eq("id", idUsuario)
-                                    }
-                                }
-                            }
-                            findNavController().navigate(R.id.action_ejercicio02_to_niveles)
-                        } catch (e: Exception) {
-                            print(e)
-                        }
-                    }
+                    val bundle = bundleOf("infoNivel" to infoNivel)
+                    findNavController().navigate(R.id.action_ejercicio02_to_ejercicio03,bundle)
                 }
             }
         }

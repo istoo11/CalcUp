@@ -6,8 +6,8 @@ import kotlinx.serialization.Serializable
 data class Usuario(
     val id: String,
     val usuario: String,
-    val email: String,
     val puntos: Int,
     val nivel: Int,
     val id_icono: Int,
+    val id_color: Int,
 )

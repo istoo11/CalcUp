@@ -1,6 +1,7 @@
 package com.example.calcup.Fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Button
@@ -53,7 +54,7 @@ class CrearCuentaFragment : Fragment(R.layout.fragment_crear_cuenta) {
                     }
 
                     if (creado != null) {
-                        val usuario = Usuario(creado.id, nickname, creado.email.toString(), 0, 1,0)
+                        val usuario = Usuario(creado.id, nickname,  0, 1,0,0)
                         ClienteSupabase.supabase.from("usuarios").insert(usuario)
                         Toast.makeText(requireContext(), "Usuario creado correctamente", Toast.LENGTH_SHORT).show()
                         findNavController().popBackStack()
@@ -61,7 +62,7 @@ class CrearCuentaFragment : Fragment(R.layout.fragment_crear_cuenta) {
                         Toast.makeText(requireContext(), "Error al rellenar el usuario", Toast.LENGTH_SHORT).show()
                     }
                 } catch (e: Exception) {
-                    e.printStackTrace()
+                    Log.e("Inicio_sesion", e.toString());
                     Toast.makeText(requireContext(), "Error al crear el usuario", Toast.LENGTH_LONG).show()
                 }
             }

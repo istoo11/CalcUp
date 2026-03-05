@@ -32,7 +32,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 try {
                     supabase.auth.signInWith(Email) {
                         email = "Romansami40@gmail.com"
-                        password = "Pecalino12"
+                        password = "Prueba"
                         //email = correo
                         //password = contrasena
                     }

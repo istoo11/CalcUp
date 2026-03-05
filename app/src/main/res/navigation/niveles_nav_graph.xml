@@ -33,7 +33,8 @@
         <action
             android:id="@+id/action_ejericicio01_to_ejercicio02"
             app:destination="@id/ejercicio02"
-            app:popUpTo="@id/ejericicio01" />
+            app:popUpTo="@id/ejericicio01"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/ejercicio02"
@@ -41,9 +42,18 @@
         android:label="fragment_ejercicio02"
         tools:layout="@layout/fragment_ejercicio02" >
         <action
-            android:id="@+id/action_ejercicio02_to_niveles"
-            app:destination="@id/niveles"
-            app:popUpTo="@id/niveles"
+            android:id="@+id/action_ejercicio02_to_ejercicio03"
+            app:destination="@id/ejercicio03"
+            app:popUpTo="@id/ejercicio02"
             app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/ejercicio03"
+        android:name="com.example.calcup.Fragments.ejercicio03"
+        android:label="fragment_ejercicio03"
+        tools:layout="@layout/fragment_ejercicio03" >
+        <action
+            android:id="@+id/action_ejercicio03_to_niveles"
+            app:destination="@id/niveles" />
     </fragment>
 </navigation>
