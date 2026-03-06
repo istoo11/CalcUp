@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun cargarDatosMenuLateral() {
+    fun cargarDatosMenuLateral() {
         val navView: NavigationView = findViewById(R.id.nav_listaNivel)
         val headerView = navView.getHeaderView(0)
 
