@@ -1,6 +1,7 @@
 package com.example.calcup.Fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,17 +14,14 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.example.calcup.Activity.MainActivity
-import com.example.calcup.Objetos.Usuario
 import com.example.calcup.Objetos.personalizables
 import com.example.calcup.Objetos.usuario_personalizable
 import com.example.calcup.R
 import io.github.jan.supabase.auth.auth
 import io.github.jan.supabase.postgrest.from
 import kotlinx.coroutines.launch
-import kotlin.Int
 
-
-class tienda : Fragment(R.layout.fragment_tienda) {
+class inventario : Fragment(R.layout.fragment_inventario) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -32,7 +30,7 @@ class tienda : Fragment(R.layout.fragment_tienda) {
 
     private fun cargarDatos() {
 
-        val listaCosmeticos = view?.findViewById<ListView>(R.id.listViewCosmeticos) ?: return
+        val listaCosmeticos = view?.findViewById<ListView>(R.id.listViewAdquiridos) ?: return
 
         viewLifecycleOwner.lifecycleScope.launch {
             try {
@@ -44,10 +42,11 @@ class tienda : Fragment(R.layout.fragment_tienda) {
                     filter { eq("id_usuario", idUsuario) }
                 }.decodeList<usuario_personalizable>().map { it.id_cosmetico }
 
-                val cosmeticosDisponibles = cosmeticos.filterNot { it.id in idsComprados }
+                val cosmeticosAdquiridos = cosmeticos.filter { it.id in idsComprados }
+                Log.d("PRUEBA_DB", "Contenido: $cosmeticosAdquiridos")
 
                 listaCosmeticos.adapter = object :
-                    ArrayAdapter<personalizables>(requireContext(), 0, cosmeticosDisponibles) {
+                    ArrayAdapter<personalizables>(requireContext(), 0, cosmeticosAdquiridos) {
                     override fun getView(
                         posicion: Int,
                         convertView: View?,
@@ -56,15 +55,14 @@ class tienda : Fragment(R.layout.fragment_tienda) {
                         val viewItem = convertView ?: LayoutInflater.from(context)
                             .inflate(R.layout.cosmetico, padre, false)
 
-                        val objeto = getItem(posicion)!!
+                        val objeto = cosmeticosAdquiridos[posicion]
 
-                        val textoPrecio = viewItem.findViewById<TextView>(R.id.txtPrecio)
-                        val txtDesc = viewItem.findViewById<TextView>(R.id.txtDescripcion)
                         val btn = viewItem.findViewById<Button>(R.id.buttonComprar)
+                        val txtDesc = viewItem.findViewById<TextView>(R.id.txtDescripcion)
                         val iconoCosmetico = viewItem.findViewById<ImageView>(R.id.iconoCosmetico)
 
-
                         if (objeto.tipo.equals("icono")) {
+                            txtDesc.text = "Icono de perfil"
                             val imagen = objeto.tipo + "_" + objeto.clave
                             val resID = context.resources.getIdentifier(
                                 imagen,
@@ -72,15 +70,30 @@ class tienda : Fragment(R.layout.fragment_tienda) {
                                 context.packageName
                             )
                             iconoCosmetico.setImageResource(resID)
-                            val numeroPrecio = (objeto.clave.toInt() * 100)
-                            textoPrecio.text = numeroPrecio.toString()
-                            txtDesc.text = objeto.descripcion
-
+                            btn.text = "\uD83D\uDDBC\uFE0F"
                             btn.setOnClickListener {
-                                ejecutarCompra(objeto, numeroPrecio)
+                                val id = objeto.clave
+                                viewLifecycleOwner.lifecycleScope.launch {
+                                    supabase.from("usuarios").update(mapOf("id_icono" to id)) {
+                                            filter { eq("id", idUsuario) }
+                                        }
+                                }
+                                (activity as? MainActivity)?.cargarDatosMenuLateral()
+
+                            }
+                        } else if (objeto.tipo.equals("icono")) {
+                            txtDesc.text = "Icono de perfil"
+                            val imagen = objeto.tipo + "_" + objeto.clave
+                            val resID = context.resources.getIdentifier(
+                                imagen,
+                                "drawable",
+                                context.packageName
+                            )
+                            iconoCosmetico.setImageResource(resID)
+                            btn.setOnClickListener {
+
                             }
                         }
-
                         return viewItem
                     }
                 }
@@ -89,35 +102,4 @@ class tienda : Fragment(R.layout.fragment_tienda) {
             }
         }
     }
-
-    fun ejecutarCompra(objeto: personalizables, valorPrecio: Int) {
-        viewLifecycleOwner.lifecycleScope.launch {
-            val idUsuario = supabase.auth.retrieveUserForCurrentSession().id
-            try {
-                val usuario = supabase.from("usuarios").select {
-                    filter { eq("id", idUsuario) }
-                }.decodeSingle<Usuario>()
-
-                if (usuario.puntos >= valorPrecio) {
-                    val registro = usuario_personalizable(idUsuario, objeto.id)
-                    supabase.from("usuario_personalizable").upsert(registro)
-                    supabase.from("usuarios")
-                        .update(mapOf("puntos" to (usuario.puntos - valorPrecio))) {
-                            filter { eq("id", idUsuario) }
-                        }
-
-                    cargarDatos()
-
-                    (activity as? MainActivity)?.cargarDatosMenuLateral()
-                    Toast.makeText(requireContext(), "Compra realizada!", Toast.LENGTH_SHORT).show()
-                } else {
-                    Toast.makeText(requireContext(), "Puntos insuficientes", Toast.LENGTH_SHORT)
-                        .show()
-                }
-            } catch (e: Exception) {
-                Toast.makeText(requireContext(), "Error en la compra", Toast.LENGTH_SHORT).show()
-            }
-        }
-    }
-
 }

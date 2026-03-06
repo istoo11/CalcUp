@@ -59,17 +59,27 @@ class MainActivity : AppCompatActivity() {
                     if(navGraph.currentDestination?.id != R.id.niveles) {
                         if(navGraph.currentDestination?.id == R.id.tienda){
                             navGraph.navigate(R.id.action_tienda_to_niveles)
+                        }else if(navGraph.currentDestination?.id == R.id.inventario){
+                            navGraph.navigate(R.id.action_inventario_to_niveles)
                         }
 
                     }
                 }
                 R.id.nav_inventario -> {
-
+                    if(navGraph.currentDestination?.id != R.id.inventario) {
+                        if(navGraph.currentDestination?.id == R.id.niveles){
+                            navGraph.navigate(R.id.action_niveles_to_inventario)
+                        }else if(navGraph.currentDestination?.id == R.id.tienda){
+                            navGraph.navigate(R.id.action_tienda_to_inventario)
+                        }
+                    }
                 }
                 R.id.nav_tienda -> {
                     if(navGraph.currentDestination?.id != R.id.tienda) {
                         if(navGraph.currentDestination?.id == R.id.niveles){
                             navGraph.navigate(R.id.action_niveles_to_tienda)
+                        }else if(navGraph.currentDestination?.id == R.id.inventario){
+                            navGraph.navigate(R.id.action_inventario_to_tienda)
                         }
                     }
                 }

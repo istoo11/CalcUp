@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_niveles_to_tienda"
             app:destination="@id/tienda" />
+        <action
+            android:id="@+id/action_niveles_to_inventario"
+            app:destination="@id/inventario" />
     </fragment>
     <fragment
         android:id="@+id/consejo1"
@@ -67,5 +70,20 @@
         <action
             android:id="@+id/action_tienda_to_niveles"
             app:destination="@id/niveles" />
+        <action
+            android:id="@+id/action_tienda_to_inventario"
+            app:destination="@id/inventario" />
+    </fragment>
+    <fragment
+        android:id="@+id/inventario"
+        android:name="com.example.calcup.Fragments.inventario"
+        android:label="fragment_inventario"
+        tools:layout="@layout/fragment_inventario" >
+        <action
+            android:id="@+id/action_inventario_to_niveles"
+            app:destination="@id/niveles" />
+        <action
+            android:id="@+id/action_inventario_to_tienda"
+            app:destination="@id/tienda" />
     </fragment>
 </navigation>

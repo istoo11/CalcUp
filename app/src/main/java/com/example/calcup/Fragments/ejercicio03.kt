@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.calcup.Activity.MainActivity
 import com.example.calcup.Objetos.NivelUIPruebas
 import com.example.calcup.Objetos.Usuario
 import com.example.calcup.R
@@ -48,12 +49,13 @@ class ejercicio03 : Fragment(R.layout.fragment_ejercicio03) {
                             filter { eq("id", idUsuario) }
                         }.decodeSingle<Usuario>()
                         if(usuario.nivel == infoNivel.nivel) {
-                            supabase.from("usuarios").update(mapOf("nivel" to usuario.nivel+1)) {
+                            supabase.from("usuarios").update(mapOf("nivel" to (usuario.nivel+1),"puntos" to (usuario.puntos + (infoNivel.nivel*10)))) {
                                 filter {
                                     eq("id", idUsuario)
                                 }
                             }
                         }
+                        (activity as? MainActivity)?.cargarDatosMenuLateral()
                         val bundle = bundleOf("infoNivel" to infoNivel)
                         findNavController().navigate(R.id.action_ejercicio03_to_niveles,bundle)
                     } catch (e: Exception) {
