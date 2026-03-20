@@ -21,10 +21,6 @@ val supabase = ClienteSupabase.supabase
 
 class CrearCuentaFragment : Fragment(R.layout.fragment_crear_cuenta) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -41,7 +37,7 @@ class CrearCuentaFragment : Fragment(R.layout.fragment_crear_cuenta) {
                 return@setOnClickListener
             }
 
-            if (!contraseña.equals(contraseña2)){
+            if (contraseña != contraseña2){
                 Toast.makeText(requireContext(), "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }

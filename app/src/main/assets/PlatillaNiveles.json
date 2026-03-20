@@ -1,36 +1,97 @@
 [
-  { "nivel": 1, "descripcion": "Primeros pasos", "consejos": ["Tómate todo el tiempo que necesites para explorar la interfaz inicial;"]},
-  { "nivel": 2, "descripcion": "Aprendiendo la base", "consejos": ["Familiarízate con los controles básicos", "No tengas miedo a fallar en los primeros intentos"] },
-  { "nivel": 3, "descripcion": "Calentamiento suave", "consejos": ["Mantén un ritmo constante", "Observa los patrones simples que aparecen"] },
-  { "nivel": 4, "descripcion": "Entorno conocido", "consejos": ["Aprovecha lo aprendido en los niveles anteriores", "Relájate, ya dominas este terreno"] },
-  { "nivel": 5, "descripcion": "Pequeño desafío", "consejos": ["Presta atención a los cambios repentinos", "Empieza a gestionar mejor tus recursos"] },
-  { "nivel": 6, "descripcion": "Consolidación", "consejos": ["Asegura tus movimientos antes de actuar", "La repetición es la clave del éxito"] },
-  { "nivel": 7, "descripcion": "Rumbo al progreso", "consejos": ["No te confíes, la velocidad empieza a subir", "Busca rutas alternativas más eficientes"] },
-  { "nivel": 8, "descripcion": "Nuevas mecánicas", "consejos": ["Lee bien los tutoriales de esta fase", "Prueba la nueva habilidad en un entorno seguro"] },
-  { "nivel": 9, "descripcion": "Concentración total", "consejos": ["Elimina distracciones externas", "Mantén la vista en el centro de la acción"] },
+  {
+    "nivel": 1,
+    "descripcion": "SUMAS",
+    "consejos": [
+      "Empieza despacio y asegúrate de leer bien cada enunciado antes de responder.",
+      "Para las sumas mentales, usa tus dedos o visualiza los números en tu cabeza.",
+      "Para las series, busca la regla: ¿se suma 1, 2, 3 o más?",
+      "En los problemas, traduce las palabras a números antes de sumar.",
+      "Si te trabas, respira, mira los números otra vez y calcula paso a paso. ¡No hay prisa!"
+    ],
+    "EJ01": ["1+1","2+2","3+1","4+2","5+3"],
+    "SolucionEJ01": ["2","4","4","6","8"],
+    "EJ02": ["2, 4, 6, 8, X", "1, 3, 5, 7, X", "5, 10, 15, 20, X", "3, 6, 9, 12, X", "4, 8, 12, 16, X"],
+    "SolucionEJ02": ["10", "9", "25", "15", "20"],
+    "EJ03": [
+      "Si tengo 3 manzanas y me da mi amigo 3 más, ¿cuántas tengo?",
+      "Si tengo 2 caramelos y compro 5 más, ¿cuántos tengo en total?",
+      "Ana tenía 1 globo y le regalaron 4, ¿cuántos tiene?",
+      "Pedro tiene 3 lápices y le dan 2 más, ¿cuántos tiene?",
+      "Si hay 5 pájaros en un árbol y llegan 3 más, ¿cuántos hay?"
+    ],
+    "SolucionEJ03": ["6", "7", "5", "5", "8"]
+  },
 
 
-  { "nivel": 10, "descripcion": "Primer gran hito", "consejos": ["Analiza el comportamiento del jefe final", "Celebra este logro, has avanzado mucho"] },
-  { "nivel": 11, "descripcion": "Subiendo el listón", "consejos": ["Optimiza tus tiempos de reacción", "Ajusta la sensibilidad si lo necesitas"] },
-  { "nivel": 12, "descripcion": "Ritmo constante", "consejos": ["No aceleres si no es necesario", "La fluidez es más importante que la fuerza"] },
-  { "nivel": 13, "descripcion": "Zona intermedia", "consejos": ["Prepárate para un pico de dificultad", "Revisa tu equipo o habilidades actuales"] },
-  { "nivel": 14, "descripcion": "Habilidades a prueba", "consejos": ["Combina mecánicas antiguas con las nuevas", "Sé creativo para resolver los obstáculos"] },
-  { "nivel": 15, "descripcion": "Punto de no retorno", "consejos": ["Asegúrate de estar listo antes de avanzar", "Guarda tu progreso si es posible"] },
-  { "nivel": 16, "descripcion": "Dominio técnico", "consejos": ["La precisión aquí se mide en milímetros", "Aprende los tiempos de recuperación de tus acciones"] },
-  { "nivel": 17, "descripcion": "Camino avanzado", "consejos": ["Utiliza el entorno a tu favor", "No malgastes energía en movimientos innecesarios"] },
-  { "nivel": 18, "descripcion": "Resistencia pura", "consejos": ["Mantén la calma bajo presión prolongada", "Recuerda respirar profundamente"] },
-  { "nivel": 19, "descripcion": "Cerca de la élite", "consejos": ["Casi estás en el top, no te rindas ahora", "Pulir los pequeños errores es vital"] },
 
-
-  { "nivel": 20, "descripcion": "Maestro intermedio", "consejos": ["Ya no eres un novato, actúa como tal", "Enseña a otros lo que has aprendido hasta aquí"] },
-  { "nivel": 21, "descripcion": "Entrada al abismo", "consejos": ["Prepárate para lo desconocido", "La oscuridad requiere sentidos más agudos"] },
-  { "nivel": 22, "descripcion": "Tensión máxima", "consejos": ["Un solo error puede ser fatal", "Confía en tu memoria muscular"] },
-  { "nivel": 23, "descripcion": "Precisión extrema", "consejos": ["Calcula cada movimiento con antelación", "La paciencia es tu mejor herramienta ahora"] },
-  { "nivel": 24, "descripcion": "Reflejos de acero", "consejos": ["Reacciona por instinto", "No pienses, solo actúa"] },
-  { "nivel": 25, "descripcion": "Desafío superior", "consejos": ["Supera tus propios límites", "Analiza tus grabaciones para detectar fallos"] },
-  { "nivel": 26, "descripcion": "Estrategia vital", "consejos": ["El orden de los factores sí altera el producto", "Traza un plan antes de empezar el nivel"] },
-  { "nivel": 27, "descripcion": "Límite alcanzado", "consejos": ["Descansa si te sientes bloqueado", "La mente fresca rinde el doble"] },
-  { "nivel": 28, "descripcion": "Penúltimo aliento", "consejos": ["Siente la meta, está a la vuelta de la esquina", "Da el 110% de tu capacidad"] },
-  { "nivel": 29, "descripcion": "Umbral del experto", "consejos": ["Demuestra que dominas todas las mecánicas", "Solo los mejores llegan a este punto"] },
-  { "nivel": 30, "descripcion": "Leyenda final", "consejos": ["Disfruta de la cima", "Has alcanzado la perfección absoluta"] }
+  {
+    "nivel": 21,
+    "descripcion": "Porcentajes y proporciones",
+    "consejos": [
+      "El 10% de un número es mover la coma un lugar a la izquierda.",
+      "Para calcular el 50% de un número solo tienes que dividirlo entre 2.",
+      "El 25% es la cuarta parte de un número, o dos veces la mitad.",
+      "Para aumentar un número un porcentaje, primero calcula el porcentaje y luego súmalo.",
+      "Para disminuir un número un porcentaje, calcula el porcentaje y réstalo."
+    ],
+    "EJ01": ["10% de 200", "50% de 80", "25% de 60", "20% de 150", "5% de 100"],
+    "SolucionEJ01": ["20", "40", "15", "30", "5"],
+    "EJ02": ["10, 8, 6.4, X", "5, 6, 7.2, X", "4, 5, 6.25, X", "12, 9, 6.75, X", "3, 4.5, 6.75, X"],
+    "SolucionEJ02": ["5", "9", "8", "7", "11"],
+    "EJ03": [
+    "Un producto cuesta 100 euros, le aplican un descuento del 20% y luego sube un 10%, ¿cuánto cuesta ahora?",
+    "Una camiseta vale 50 euros, sube un 15% y después tiene un descuento del 5%, ¿cuál es el nuevo precio?",
+    "Un videojuego cuesta 80 euros, tiene un descuento del 25% y luego sube un 30%, ¿cuánto pagas?",
+    "Un móvil cuesta 200 euros, sube un 10% y luego le aplican un descuento del 15%, ¿cuál es su precio final?",
+    "Un libro cuesta 40 euros, le aplican un descuento del 50% y luego se incrementa el precio un 20%, ¿cuánto pagas?"
+  ],
+    "SolucionEJ03": ["88", "54", "84", "187", "24"]
+  },
+  {
+    "nivel": 22,
+    "descripcion": "Operaciones con potencias",
+    "consejos": [
+      "Recuerda que multiplicar potencias con la misma base suma los exponentes.\n (5^3 * 5^3 = 5^6)",
+      "Para dividir potencias de la misma base, resta los exponentes.\n (5^6 / 5^3 = 5^3)",
+      "Elevar una potencia a otra potencia multiplica los exponentes.\n ((5^3)^3 = 5^9)",
+      "Cualquier número elevado a 0 da 1.",
+      "Cualquier número elevado a 1 se queda igual."
+    ],
+    "EJ01": ["2^3 * 2^2", "5^2 / 5^1", "3^4 / 3^2", "4^3 * 4^0", "6^2 / 6^2"],
+    "SolucionEJ01": ["32", "5", "9", "64", "1"],
+    "EJ02": ["2, 4, 8, X", "1, 2, 4, X", "3, 6, 12, X", "2, 3, 6, X", "1, 3, 9, X"],
+    "SolucionEJ02": ["16", "8", "24", "12", "27"],
+    "EJ03": [
+      "Un ordenador cuesta 2^3 euros y luego se multiplica por 2^2, ¿cuánto cuesta en total?",
+      "Un juego cuesta 4^2 euros, y luego se divide entre 2^2, ¿cuánto pagas?",
+      "Una botella cuesta 2^3 euros, se eleva al cuadrado y luego se divide entre 2^4, ¿cuánto es?",
+      "Un reloj cuesta 3^2 euros, se eleva al cubo y luego se divide entre 3^4, ¿cuánto cuesta?",
+      "Un libro cuesta 2^2 euros, se eleva al cubo y luego se divide entre 2^3, ¿cuánto pagas?"
+    ],
+    "SolucionEJ03": ["32", "4", "4", "9", "4"]
+  },
+  {
+    "nivel": 23,
+    "descripcion": "Usando logaritmos",
+    "consejos": [
+      "Existen varios logaritmos, en este caso se usaran los de base 10.",
+      "Para estos logaritmos solo hay que contar el numero de ceros.",
+      "Por ejemplo log10(100) = 2 porque tiene 2 ceros.",
+      "Por otro lado los decimales se cuentan en negativo.",
+      "Por ejemplo log10(0.001) = -3 porque tiene 3 ceros."
+    ],
+    "EJ01": ["log10(1000)", "log10(100)", "log10(10)", "log10(0.001)", "log10(0.0001)"],
+    "SolucionEJ01": ["3", "2", "1", "-3", "-4"],
+    "EJ02": ["log10(1), log10(10), log10(100), X", "log10(0.1), log10(0.01), log10(0.001), X", "log10(0.01), log10(0.1), log10(1), X", "100, 1000, 10000, X"],
+    "SolucionEJ02": ["3", "100", "10000", "100000", "10"],
+    "EJ03": [
+      "El logaritmo base 10 de un número es 3, ¿cuál es el número?",
+      "El logaritmo base 10 de un número es 2, ¿cuál es el número?",
+      "Si log10(x) = 0, ¿cuánto vale x?",
+      "Si log10(x) = 4, ¿cuánto vale x?",
+      "Un número x tiene log10(x) = 1, ¿cuál es x?"
+    ],
+    "SolucionEJ03": ["1000", "100", "1", "10000", "10"]
+  }
 ]

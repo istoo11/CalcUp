@@ -19,9 +19,7 @@ class ejercicio02 : Fragment(R.layout.fragment_ejercicio02) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //val infoNivel = requireArguments().getSerializable("infoNivel", NivelUI::class.java)!!
         val infoNivel = requireArguments().getSerializable("infoNivel", NivelUIPruebas::class.java)!!
-        val btnAtras = view.findViewById<Button>(R.id.btn_Final)
         val serie = view.findViewById<TextView>(R.id.tvOperacionMatematica)
         val conjuntoBotones = view.findViewById<MaterialButtonToggleGroup>(R.id.grupoBotones)
         val btn1 = view.findViewById<MaterialButton>(R.id.btnOpcion1)

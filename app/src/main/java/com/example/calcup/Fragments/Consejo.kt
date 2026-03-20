@@ -21,7 +21,6 @@ class Consejo : Fragment(R.layout.fragment_consejo) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //val infoNivel = requireArguments().getSerializable("infoNivel", NivelUI::class.java)!!
         val infoNivel = requireArguments().getSerializable("infoNivel", NivelUIPruebas::class.java)!!
 
         val btnAtras = view.findViewById<Button>(R.id.btn_Ejercicio01)
@@ -29,7 +28,7 @@ class Consejo : Fragment(R.layout.fragment_consejo) {
         val contenedor = view.findViewById<LinearLayout>(R.id.listaConsejos)
         numeroNivel.text = "${infoNivel.nivel}"
 
-        infoNivel?.consejos?.forEach { consejo ->
+        infoNivel.consejos.forEach { consejo ->
             val textView = TextView(requireContext())
             textView.text = consejo
             textView.textSize = 18f

@@ -39,21 +39,17 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
                 val nivelUsuario = response.nivel
 
                 val json = requireContext().assets
-                    //.open("PlatillaNiveles.json")
-                    .open("PlatillaNivelesPruebas.json")
+                    .open("PlatillaNiveles.json")
                     .bufferedReader()
                     .use { it.readText() }
 
                 val listType = object : TypeToken<List<NivelUIPruebas>>() {}.type
                 val nivelesUI: List<NivelUIPruebas> = Gson().fromJson(json, listType)
-                //val listType = object : TypeToken<List<NivelUI>>() {}.type
-                //val nivelesUI: List<NivelUI> = Gson().fromJson(json, listType)
 
                 nivelesUI.forEach { nivelUI ->
                     nivelUI.desbloqueado = nivelUI.nivel <= nivelUsuario
                 }
 
-                //listaNiveles.adapter = object : ArrayAdapter<NivelUI>(requireContext(), 0, nivelesUI) {
                 listaNiveles.adapter = object : ArrayAdapter<NivelUIPruebas>(requireContext(), 0, nivelesUI) {
                     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                         val viewItem = convertView ?: LayoutInflater.from(context)
@@ -66,7 +62,7 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
                         val txtDesc = viewItem.findViewById<TextView>(R.id.txtDescripcion)
                         val btn = viewItem.findViewById<Button>(R.id.buttonJugar)
 
-                        txtNivel.setText("Nivel ${nivel.nivel}")
+                        txtNivel.text = "Nivel ${nivel.nivel}"
                         txtDesc.text = nivel.descripcion
 
                         if (nivel.desbloqueado) {
