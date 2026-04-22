@@ -22,6 +22,37 @@
     ],
     "SolucionEJ03": ["6", "7", "5", "5", "8"]
   },
+  {
+    "nivel": 10,
+    "descripcion": "OPERACIONES COMBINADAS",
+    "consejos": [
+      "Sigue siempre el orden de las operaciones.",
+      "Primero paréntesis, luego multiplicaciones o divisiones de izquierda a derecha.",
+      "Por último sumas o restas de izquierda a derecha.",
+
+      "Los paréntesis, son como si fueran mini operaciones.",
+      "Si hay varias operaciones del mismo tipo (× y ÷), hazlas de izquierda a derecha.",
+      "Si el resultado te parece raro, revisa: normalmente el fallo está en saltarse el orden."
+    ],
+    "EJ01": ["(3+2)*2 + 1", "8/(2+2) + 5", "(6-2)*3 - 4", "9 - (2+1)*2", "(4+4)/2 + 3"],
+    "SolucionEJ01": ["11", "7", "8", "3", "7"],
+    "EJ02": [
+      "(0+1)*2, (1+2)*2, (2+3)*2, (3+4)*2, X",
+      "10/(1+1), 15/(2+2), 20/(3+3), 25/(4+4), X",
+      "(2*2)-1, (3*2)-2, (4*2)-3, (5*2)-4, X",
+      "(5+7)/2, (7+9)/2, (9+11)/2, (11+13)/2, X",
+      "(-3-7)/2*1, (-2-5)/2*2, (-1-3)/2*3, (0-1)/2*4, X"
+    ],
+    "SolucionEJ02": ["18", "3", "7", "13", "5"],
+    "EJ03": [
+      "Si tengo 3 manzanas y me da mi amigo 3 más, ¿cuántas tengo?",
+      "Si tengo 2 caramelos y compro 5 más, ¿cuántos tengo en total?",
+      "Ana tenía 1 globo y le regalaron 4, ¿cuántos tiene?",
+      "Pedro tiene 3 lápices y le dan 2 más, ¿cuántos tiene?",
+      "Si hay 5 pájaros en un árbol y llegan 3 más, ¿cuántos hay?"
+    ],
+    "SolucionEJ03": ["6", "7", "5", "5", "8"]
+  },
 
 
 

@@ -67,12 +67,14 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
 
                         if (nivel.desbloqueado) {
                             btn.isEnabled = true
-                            if(nivel.nivel<=10){
-                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_facil)
-                            }else if(nivel.nivel<=20){
-                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_intermedio)
-                            }else{
-                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_dificil)
+                            if (nivel.nivel % 10 == 0) {
+                                fila.setBackgroundResource(R.drawable.estilo_botones_examen_final);
+                            } else if (nivel.nivel <= 10) {
+                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_facil);
+                            } else if (nivel.nivel <= 20) {
+                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_intermedio);
+                            } else {
+                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_dificil);
                             }
                         } else {
                             btn.isEnabled = false
