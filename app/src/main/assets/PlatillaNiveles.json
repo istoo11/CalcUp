@@ -23,6 +23,187 @@
     "SolucionEJ03": ["6", "7", "5", "5", "8"]
   },
   {
+    "nivel": 2,
+    "descripcion": "SUMAS CON 2 DIGITOS",
+    "consejos": [
+      "Para lass sumas de dos digitos suma los digitos de uno en uno.",
+      "Una vez tengas todo sumado pon todos los numeros juntos.",
+      "Para las series, busca la regla: ¿se suma 1, 2, 3 o más?",
+      "En los problemas, traduce las palabras a números antes de sumar.",
+      "Si te trabas, respira, mira los números otra vez y calcula paso a paso. ¡No hay prisa!"
+    ],
+    "EJ01": ["11+11","22+22","33+11","44+22","55+33"],
+    "SolucionEJ01": ["22","44","44","66","88"],
+    "EJ02": ["5, 7, 9, 11, X", "-33, -22, -11, 1, X", "5, 10, 15, 20, X", "3, 6, 9, 12, X", "4, 8, 12, 16, X"],
+    "SolucionEJ02": ["13", "11", "25", "15", "20"],
+    "EJ03": [
+      "Si estoy en la planta 11 y y subo 20, ¿en que planta estoy?",
+      "Si tengo 20 flores y me regalan 20 mas, ¿cuántas tengo en total?",
+      "Ana tenía 10 globo y le regalaron 40, ¿cuántos tiene?",
+      "Una profesora tiene 30 alumnos y admite a 10 mas, ¿cuántos tiene en total?",
+      "Si hay 50 animales en un zoo y vienen 20 pajaros, ¿cuántos animales hay en total?"
+    ],
+    "SolucionEJ03": ["31", "40", "50", "40", "70"]
+  },
+  {
+    "nivel": 3,
+    "descripcion": "RESTAS",
+    "consejos": [
+      "Empieza despacio y asegúrate de leer bien cada enunciado antes de responder.",
+      "Las restas es como quitar cosas",
+      "Para las restas, usa tus dedos o visualiza los números en tu cabeza.",
+      "Para las series, busca la regla: ¿se resta 1, 2, 3 o más?",
+      "En los problemas, traduce las palabras a números antes de restar.",
+      "Si te trabas, respira, mira los números otra vez y calcula paso a paso. ¡No hay prisa!"
+    ],
+    "EJ01": ["1-1","2-2","3-1","4-2","5-3"],
+    "SolucionEJ01": ["0","0","2","2","2"],
+    "EJ02": ["9, 8, 7, 6, X", "12, 10, 8, 6, X", "18, 15, 12, 9, X", "30, 25, 20, 15, X"],
+    "SolucionEJ02": ["5", "4", "6", "10"],
+    "EJ03": [
+      "Si tengo 10€ y pago 5€, ¿cuanto me queda?",
+      "Si tengo 2 caramelos y me como 1, ¿cuántos tengo en total?",
+      "Ana tenía 4 globos y se pincha 1, ¿cuántos tengo?",
+      "Pedro tiene 3 lápices y se le rompe 1, ¿cuántos tiene?",
+      "Si hay 5 pájaros en un árbol y se van 3, ¿cuántos quedan?"
+    ],
+    "SolucionEJ03": ["5", "1", "3", "2", "2"]
+  },
+  {
+    "nivel": 4,
+    "descripcion": "RESTAS DE 2 DIGITOS",
+    "consejos": [
+      "Empieza despacio y asegúrate de leer bien cada enunciado antes de responder.",
+      "Las restas es como quitar cosas",
+      "Para las restas, usa tus dedos o visualiza los números en tu cabeza.",
+      "Para las series, busca la regla: ¿se resta 1, 2, 3 o más?",
+      "En los problemas, traduce las palabras a números antes de restar.",
+      "Si te trabas, respira, mira los números otra vez y calcula paso a paso. ¡No hay prisa!"
+    ],
+    "EJ01": ["11-11","22-11","33-11","44-22","55-33"],
+    "SolucionEJ01": ["0","11","22","22","22"],
+    "EJ02": ["60, 50, 40, 30, X","40, 31, 22, 13, X", "55, 44, 33, 22, X"],
+    "SolucionEJ02": ["20", "4", "11"],
+    "EJ03": [
+      "Si tengo 80€ y me gasto 20€, ¿cuanto dinero me queda?",
+      "Si tengo 20 caramelos y reparto 10, ¿cuántos tengo en total?",
+      "Ana tenía 50 petardos y uso 20, ¿cuantos le quedan?"
+    ],
+    "SolucionEJ03": ["60", "10", "30"]
+  },
+  {
+    "nivel": 5,
+    "descripcion": "SUMAS CON ACARREO",
+    "consejos": [
+      "Empieza despacio y asegúrate de leer bien cada enunciado antes de responder."
+    ],
+    "EJ01": ["1+1","2+2","3+1","4+2","5+3"],
+    "SolucionEJ01": ["2","4","4","6","8"],
+    "EJ02": ["2, 4, 6, 8, X", "1, 3, 5, 7, X", "5, 10, 15, 20, X", "3, 6, 9, 12, X", "4, 8, 12, 16, X"],
+    "SolucionEJ02": ["10", "9", "25", "15", "20"],
+    "EJ03": [
+      "Si tengo 3 manzanas y me da mi amigo 3 más, ¿cuántas tengo?",
+      "Si tengo 2 caramelos y compro 5 más, ¿cuántos tengo en total?",
+      "Ana tenía 1 globo y le regalaron 4, ¿cuántos tiene?",
+      "Pedro tiene 3 lápices y le dan 2 más, ¿cuántos tiene?",
+      "Si hay 5 pájaros en un árbol y llegan 3 más, ¿cuántos hay?"
+    ],
+    "SolucionEJ03": ["6", "7", "5", "5", "8"]
+  },
+  {
+    "nivel": 6,
+    "descripcion": "NUMEROS NEGATIVOS",
+    "consejos": [
+      "Empieza despacio y asegúrate de leer bien cada enunciado antes de responder.",
+      "Para las sumas mentales, usa tus dedos o visualiza los números en tu cabeza.",
+      "Para las series, busca la regla: ¿se suma 1, 2, 3 o más?",
+      "En los problemas, traduce las palabras a números antes de sumar.",
+      "Si te trabas, respira, mira los números otra vez y calcula paso a paso. ¡No hay prisa!"
+    ],
+    "EJ01": ["1+1","2+2","3+1","4+2","5+3"],
+    "SolucionEJ01": ["2","4","4","6","8"],
+    "EJ02": ["2, 4, 6, 8, X", "1, 3, 5, 7, X", "5, 10, 15, 20, X", "3, 6, 9, 12, X", "4, 8, 12, 16, X"],
+    "SolucionEJ02": ["10", "9", "25", "15", "20"],
+    "EJ03": [
+      "Si tengo 3 manzanas y me da mi amigo 3 más, ¿cuántas tengo?",
+      "Si tengo 2 caramelos y compro 5 más, ¿cuántos tengo en total?",
+      "Ana tenía 1 globo y le regalaron 4, ¿cuántos tiene?",
+      "Pedro tiene 3 lápices y le dan 2 más, ¿cuántos tiene?",
+      "Si hay 5 pájaros en un árbol y llegan 3 más, ¿cuántos hay?"
+    ],
+    "SolucionEJ03": ["6", "7", "5", "5", "8"]
+  },
+  {
+    "nivel": 7,
+    "descripcion": "MULTIPLICACIONES (NO DISPONIBLE)",
+    "consejos": [
+      "Empieza despacio y asegúrate de leer bien cada enunciado antes de responder.",
+      "Para las sumas mentales, usa tus dedos o visualiza los números en tu cabeza.",
+      "Para las series, busca la regla: ¿se suma 1, 2, 3 o más?",
+      "En los problemas, traduce las palabras a números antes de sumar.",
+      "Si te trabas, respira, mira los números otra vez y calcula paso a paso. ¡No hay prisa!"
+    ],
+    "EJ01": ["1+1","2+2","3+1","4+2","5+3"],
+    "SolucionEJ01": ["2","4","4","6","8"],
+    "EJ02": ["2, 4, 6, 8, X", "1, 3, 5, 7, X", "5, 10, 15, 20, X", "3, 6, 9, 12, X", "4, 8, 12, 16, X"],
+    "SolucionEJ02": ["10", "9", "25", "15", "20"],
+    "EJ03": [
+      "Si tengo 3 manzanas y me da mi amigo 3 más, ¿cuántas tengo?",
+      "Si tengo 2 caramelos y compro 5 más, ¿cuántos tengo en total?",
+      "Ana tenía 1 globo y le regalaron 4, ¿cuántos tiene?",
+      "Pedro tiene 3 lápices y le dan 2 más, ¿cuántos tiene?",
+      "Si hay 5 pájaros en un árbol y llegan 3 más, ¿cuántos hay?"
+    ],
+    "SolucionEJ03": ["6", "7", "5", "5", "8"]
+  },
+  {
+    "nivel": 8,
+    "descripcion": "DIVISIONES (NO DISPONIBLE)",
+    "consejos": [
+      "Empieza despacio y asegúrate de leer bien cada enunciado antes de responder.",
+      "Para las sumas mentales, usa tus dedos o visualiza los números en tu cabeza.",
+      "Para las series, busca la regla: ¿se suma 1, 2, 3 o más?",
+      "En los problemas, traduce las palabras a números antes de sumar.",
+      "Si te trabas, respira, mira los números otra vez y calcula paso a paso. ¡No hay prisa!"
+    ],
+    "EJ01": ["1+1","2+2","3+1","4+2","5+3"],
+    "SolucionEJ01": ["2","4","4","6","8"],
+    "EJ02": ["2, 4, 6, 8, X", "1, 3, 5, 7, X", "5, 10, 15, 20, X", "3, 6, 9, 12, X", "4, 8, 12, 16, X"],
+    "SolucionEJ02": ["10", "9", "25", "15", "20"],
+    "EJ03": [
+      "Si tengo 3 manzanas y me da mi amigo 3 más, ¿cuántas tengo?",
+      "Si tengo 2 caramelos y compro 5 más, ¿cuántos tengo en total?",
+      "Ana tenía 1 globo y le regalaron 4, ¿cuántos tiene?",
+      "Pedro tiene 3 lápices y le dan 2 más, ¿cuántos tiene?",
+      "Si hay 5 pájaros en un árbol y llegan 3 más, ¿cuántos hay?"
+    ],
+    "SolucionEJ03": ["6", "7", "5", "5", "8"]
+  },
+  {
+    "nivel": 9,
+    "descripcion": "INTRODUCCION OPERACIONES COMBINADAS (NO DISPONIBLE)",
+    "consejos": [
+      "Empieza despacio y asegúrate de leer bien cada enunciado antes de responder.",
+      "Para las sumas mentales, usa tus dedos o visualiza los números en tu cabeza.",
+      "Para las series, busca la regla: ¿se suma 1, 2, 3 o más?",
+      "En los problemas, traduce las palabras a números antes de sumar.",
+      "Si te trabas, respira, mira los números otra vez y calcula paso a paso. ¡No hay prisa!"
+    ],
+    "EJ01": ["1+1","2+2","3+1","4+2","5+3"],
+    "SolucionEJ01": ["2","4","4","6","8"],
+    "EJ02": ["2, 4, 6, 8, X", "1, 3, 5, 7, X", "5, 10, 15, 20, X", "3, 6, 9, 12, X", "4, 8, 12, 16, X"],
+    "SolucionEJ02": ["10", "9", "25", "15", "20"],
+    "EJ03": [
+      "Si tengo 3 manzanas y me da mi amigo 3 más, ¿cuántas tengo?",
+      "Si tengo 2 caramelos y compro 5 más, ¿cuántos tengo en total?",
+      "Ana tenía 1 globo y le regalaron 4, ¿cuántos tiene?",
+      "Pedro tiene 3 lápices y le dan 2 más, ¿cuántos tiene?",
+      "Si hay 5 pájaros en un árbol y llegan 3 más, ¿cuántos hay?"
+    ],
+    "SolucionEJ03": ["6", "7", "5", "5", "8"]
+  },
+
+  {
     "nivel": 10,
     "descripcion": "OPERACIONES COMBINADAS",
     "consejos": [
@@ -37,8 +218,8 @@
     "EJ01": ["(3+2)*2 + 1", "8/(2+2) + 5", "(6-2)*3 - 4", "9 - (2+1)*2", "(4+4)/2 + 3"],
     "SolucionEJ01": ["11", "7", "8", "3", "7"],
     "EJ02": [
-      "(0+1)*2, (1+2)*2, (2+3)*2, (3+4)*2, X",
-      "10/(1+1), 15/(2+2), 20/(3+3), 25/(4+4), X",
+      "(0+1)*2\n(1+2)*2\n(2+3)*2\n(3+4)*2\nX",
+      "10/(1+1)\n15/(2+2)\n20/(3+3)\n25/(4+4)\nX",
       "(2*2)-1, (3*2)-2, (4*2)-3, (5*2)-4, X",
       "(5+7)/2, (7+9)/2, (9+11)/2, (11+13)/2, X",
       "(-3-7)/2*1, (-2-5)/2*2, (-1-3)/2*3, (0-1)/2*4, X"
