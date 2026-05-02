@@ -15,6 +15,7 @@ import com.example.calcup.R
 import io.github.jan.supabase.auth.auth
 import io.github.jan.supabase.postgrest.from
 import kotlinx.coroutines.launch
+import java.time.Instant
 
 class Consejo : Fragment(R.layout.fragment_consejo) {
 
@@ -41,9 +42,12 @@ class Consejo : Fragment(R.layout.fragment_consejo) {
                 try {
                     val nuevoIntento = Laderboard(
                         id_usuario = supabase.auth.retrieveUserForCurrentSession().id,
-                        id_nivel = infoNivel.nivel
+                        id_nivel = infoNivel.nivel,
+                        comienzo = Instant.now().toString()
                     )
-                    supabase.from("Laderboard").upsert(nuevoIntento)
+                    supabase.from("Laderboard").upsert(nuevoIntento) {
+                        onConflict = "id_usuario,id_nivel"
+                    }
                     val bundle = bundleOf("infoNivel" to infoNivel)
                     findNavController().navigate(R.id.action_consejo1_to_ejericicio01, bundle)
                 } catch (e: Exception) {

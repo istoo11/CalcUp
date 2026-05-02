@@ -56,7 +56,7 @@ class ejercicio03 : Fragment(R.layout.fragment_ejercicio03) {
                         }
                         (activity as? MainActivity)?.cargarDatosMenuLateral()
                         val bundle = bundleOf("infoNivel" to infoNivel)
-                        findNavController().navigate(R.id.action_ejercicio03_to_niveles,bundle)
+                        findNavController().navigate(R.id.action_ejercicio03_to_leaderboard,bundle)
                     } catch (e: Exception) {
                         print(e)
                     }

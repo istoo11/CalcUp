@@ -13,6 +13,6 @@
         android:useLevel="false"
         android:tileMode="repeat"/>
 
-    <corners android:radius="8dp"/>
+    <corners android:radius="20dp"/>
 
 </shape>

@@ -59,8 +59,9 @@
         android:label="fragment_ejercicio03"
         tools:layout="@layout/fragment_ejercicio03" >
         <action
-            android:id="@+id/action_ejercicio03_to_niveles"
-            app:destination="@id/niveles" />
+            android:id="@+id/action_ejercicio03_to_leaderboard"
+            app:destination="@id/leaderboard"
+            app:popUpTo="@id/ejercicio03" />
     </fragment>
     <fragment
         android:id="@+id/tienda"
@@ -85,5 +86,14 @@
         <action
             android:id="@+id/action_inventario_to_tienda"
             app:destination="@id/tienda" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaderboard"
+        android:name="com.example.calcup.Fragments.Leaderboard"
+        android:label="fragment_leaderboard"
+        tools:layout="@layout/fragment_leaderboard" >
+        <action
+            android:id="@+id/action_leaderboard_to_niveles"
+            app:destination="@id/niveles" />
     </fragment>
 </navigation>

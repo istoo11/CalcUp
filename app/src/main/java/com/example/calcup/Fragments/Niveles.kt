@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ListView
 import android.widget.TextView
@@ -61,24 +62,33 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
                         val txtNivel = viewItem.findViewById<TextView>(R.id.txtNivel)
                         val txtDesc = viewItem.findViewById<TextView>(R.id.txtDescripcion)
                         val btn = viewItem.findViewById<Button>(R.id.buttonJugar)
+                        val img = viewItem.findViewById<ImageView>(R.id.imgIcono)
 
                         txtNivel.text = "Nivel ${nivel.nivel}"
                         txtDesc.text = nivel.descripcion
 
+                        btn.backgroundTintList = null
                         if (nivel.desbloqueado) {
                             btn.isEnabled = true
+                            img.setImageResource(R.drawable.abierto)
                             if (nivel.nivel % 10 == 0) {
-                                fila.setBackgroundResource(R.drawable.estilo_botones_examen_final);
+                                fila.setBackgroundResource(R.drawable.estilo_botones_examen_final)
+                                btn.setBackgroundResource(R.drawable.estilo_botones_examen_final)
                             } else if (nivel.nivel <= 10) {
-                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_facil);
+                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_facil)
+                                btn.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_facil)
                             } else if (nivel.nivel <= 20) {
-                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_intermedio);
+                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_intermedio)
+                                btn.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_intermedio)
                             } else {
-                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_dificil);
+                                fila.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_dificil)
+                                btn.setBackgroundResource(R.drawable.estilo_botones_desbloqueados_dificil)
                             }
                         } else {
                             btn.isEnabled = false
+                            img.setImageResource(R.drawable.cerrado)
                             fila.setBackgroundResource(R.drawable.estilo_botones_bloqueados)
+                            btn.setBackgroundResource(R.drawable.estilo_botones_bloqueados)
                         }
 
                         btn.setOnClickListener {

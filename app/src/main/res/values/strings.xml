@@ -13,4 +13,7 @@
     <string name="consejos_para_el_nivel">CONSEJOS PARA EL NIVEL</string>
     <string name="resuelve_la_siguiente_operaci_n_matematica">RESUELVE LA SIGUIENTE OPERACIÓN MATEMATICA</string>
     <string name="continua_la_serie">CONTINUA LA SERIE</string>
+    <string name="clasificaci_n_general">CLASIFICACIÓN GENERAL</string>
+    <string name="mejores_tiempos">Mejores tiempos</string>
+    <string name="continuar">CONTINUAR</string>
 </resources>

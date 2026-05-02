@@ -62,7 +62,6 @@ class CrearCuentaFragment : Fragment(R.layout.fragment_crear_cuenta) {
                     Toast.makeText(requireContext(), "Error al crear el usuario", Toast.LENGTH_LONG).show()
                 }
             }
-
         }
     }
 }
