@@ -1,9 +1,12 @@
 package com.example.calcup.Fragments
 
+import android.content.Context
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.VibratorManager
 import androidx.fragment.app.Fragment
 import android.view.View
-import android.widget.Button
 import android.widget.TextView
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
@@ -15,6 +18,8 @@ import com.google.android.material.button.MaterialButtonToggleGroup
 
 
 class ejercicio02 : Fragment(R.layout.fragment_ejercicio02) {
+
+    private var mediaPlayer: MediaPlayer? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -51,6 +56,9 @@ class ejercicio02 : Fragment(R.layout.fragment_ejercicio02) {
                 val valorSeleccionado = botonSeleccionado.text.toString()
                 if (valorSeleccionado == solucion) {
                     val bundle = bundleOf("infoNivel" to infoNivel)
+                    mediaPlayer?.release()
+                    mediaPlayer = MediaPlayer.create(context, R.raw.correcto)
+                    mediaPlayer?.start()
                     findNavController().navigate(R.id.action_ejercicio02_to_ejercicio03,bundle)
                 }
             }

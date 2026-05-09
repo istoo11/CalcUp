@@ -1,6 +1,10 @@
 package com.example.calcup.Fragments
 
+import android.content.Context
+import android.media.MediaPlayer
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.VibratorManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +26,8 @@ import kotlinx.coroutines.launch
 
 class ejercicio03 : Fragment(R.layout.fragment_ejercicio03) {
 
+    private var mediaPlayer: MediaPlayer? = null
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -34,10 +40,11 @@ class ejercicio03 : Fragment(R.layout.fragment_ejercicio03) {
 
         btnAtras.setOnClickListener {
             if (solucion.text.toString() == infoNivel.SolucionEJ03[numero]) {
-                val fechaFin = java.time.LocalDateTime.now().toString()
+
                 viewLifecycleOwner.lifecycleScope.launch {
                     val idUsuario = supabase.auth.retrieveUserForCurrentSession().id
                     try {
+                        val fechaFin = java.time.Instant.now().toString()
                         supabase.from("Laderboard").update(mapOf("fin" to fechaFin)) {
                             filter {
                                 eq("id_usuario", idUsuario)
@@ -54,6 +61,9 @@ class ejercicio03 : Fragment(R.layout.fragment_ejercicio03) {
                                 }
                             }
                         }
+                        mediaPlayer?.release()
+                        mediaPlayer = MediaPlayer.create(context, R.raw.correcto)
+                        mediaPlayer?.start()
                         (activity as? MainActivity)?.cargarDatosMenuLateral()
                         val bundle = bundleOf("infoNivel" to infoNivel)
                         findNavController().navigate(R.id.action_ejercicio03_to_leaderboard,bundle)
@@ -63,6 +73,16 @@ class ejercicio03 : Fragment(R.layout.fragment_ejercicio03) {
                 }
             } else {
                 solucion.text.clear()
+                val vibratorManager = context?.getSystemService(Context.VIBRATOR_MANAGER_SERVICE) as VibratorManager
+                val vibrator = vibratorManager.defaultVibrator
+                val tiempos = longArrayOf(0, 50, 70, 150)
+                val amplitudes = intArrayOf(0, 255, 0, 255)
+                val efecto = VibrationEffect.createWaveform(tiempos, amplitudes, -1)
+                vibrator.vibrate(efecto)
+
+                mediaPlayer?.release()
+                mediaPlayer = MediaPlayer.create(context, R.raw.fail)
+                mediaPlayer?.start()
                 Toast.makeText(requireContext(), "Casi, vuelve a intentarlo", Toast.LENGTH_SHORT)
                     .show()
             }

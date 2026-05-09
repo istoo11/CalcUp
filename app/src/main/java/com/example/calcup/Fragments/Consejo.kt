@@ -45,9 +45,13 @@ class Consejo : Fragment(R.layout.fragment_consejo) {
                         id_nivel = infoNivel.nivel,
                         comienzo = Instant.now().toString()
                     )
-                    supabase.from("Laderboard").upsert(nuevoIntento) {
-                        onConflict = "id_usuario,id_nivel"
+                    supabase.from("Laderboard").delete {
+                        filter {
+                            eq("id_usuario", nuevoIntento.id_usuario)
+                            eq("id_nivel", nuevoIntento.id_nivel)
+                        }
                     }
+                    supabase.from("Laderboard").insert(nuevoIntento)
                     val bundle = bundleOf("infoNivel" to infoNivel)
                     findNavController().navigate(R.id.action_consejo1_to_ejericicio01, bundle)
                 } catch (e: Exception) {
