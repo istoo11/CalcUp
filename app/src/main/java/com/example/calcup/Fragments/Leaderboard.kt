@@ -17,6 +17,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -38,6 +39,7 @@ class Leaderboard : Fragment(R.layout.fragment_leaderboard) {
 
         val listaNiveles = view.findViewById<ListView>(R.id.listViewClasificacion)
         val infoNivel = requireArguments().getSerializable("infoNivel", NivelUIPruebas::class.java)!!
+        val botonContinuar = view.findViewById<Button>(R.id.btnIrANiveles);
 
         viewLifecycleOwner.lifecycleScope.launch {
             try {
@@ -90,6 +92,15 @@ class Leaderboard : Fragment(R.layout.fragment_leaderboard) {
                 e.printStackTrace()
                 Log.e("Inicio_sesion", e.toString());
             }
+        }
+
+        botonContinuar.setOnClickListener {
+            val opciones = NavOptions.Builder()
+                .setPopUpTo(R.id.niveles, true)
+                .setLaunchSingleTop(true)
+                .build()
+
+            findNavController().navigate(R.id.action_leaderboard_to_niveles, null, opciones)
         }
     }
     private fun calcularDuracion(comienzo: String?, fin: String?): String {

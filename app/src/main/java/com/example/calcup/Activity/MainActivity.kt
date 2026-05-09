@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
         val navGraph = navHostFragment.navController
 
         setSupportActionBar(toolbar)
-        supportActionBar?.title = "MI APLICACIÓN TFG"
+        supportActionBar?.title = ""
 
         val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawerLayout.addDrawerListener(toggle)
@@ -58,9 +58,9 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_niveles -> {
                     if(navGraph.currentDestination?.id != R.id.niveles) {
                         if(navGraph.currentDestination?.id == R.id.tienda){
-                            navGraph.navigate(R.id.action_tienda_to_niveles)
+                            navGraph.navigate(R.id.action_global_niveles)
                         }else if(navGraph.currentDestination?.id == R.id.inventario){
-                            navGraph.navigate(R.id.action_inventario_to_niveles)
+                            navGraph.navigate(R.id.action_global_niveles)
                         }
 
                     }
@@ -68,18 +68,18 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_inventario -> {
                     if(navGraph.currentDestination?.id != R.id.inventario) {
                         if(navGraph.currentDestination?.id == R.id.niveles){
-                            navGraph.navigate(R.id.action_niveles_to_inventario)
+                            navGraph.navigate(R.id.action_global_inventario)
                         }else if(navGraph.currentDestination?.id == R.id.tienda){
-                            navGraph.navigate(R.id.action_tienda_to_inventario)
+                            navGraph.navigate(R.id.action_global_inventario)
                         }
                     }
                 }
                 R.id.nav_tienda -> {
                     if(navGraph.currentDestination?.id != R.id.tienda) {
                         if(navGraph.currentDestination?.id == R.id.niveles){
-                            navGraph.navigate(R.id.action_niveles_to_tienda)
+                            navGraph.navigate(R.id.action_global_tienda)
                         }else if(navGraph.currentDestination?.id == R.id.inventario){
-                            navGraph.navigate(R.id.action_inventario_to_tienda)
+                            navGraph.navigate(R.id.action_global_tienda)
                         }
                     }
                 }
@@ -126,7 +126,7 @@ class MainActivity : AppCompatActivity() {
                 imgPerfil.setImageResource(resources.getIdentifier("icono_${response.id_icono}", "drawable", packageName))
 
             } catch (e: Exception) {
-                Log.e("SupabaseError", "Fallo al cargar cabecera: ${e.message}")
+                Log.e("ErrorSupabase", "Fallo al cargar cabecera: ${e.message}")
             }
         }
     }

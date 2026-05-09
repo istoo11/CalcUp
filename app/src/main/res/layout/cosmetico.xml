@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="90dp"
         android:layout_margin="8dp"
-        android:background="@drawable/estilo_botones_bloqueados"
+        android:background="@drawable/color_segundo"
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="12dp"
@@ -27,7 +27,7 @@
 
 
         <LinearLayout
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
@@ -35,7 +35,6 @@
                 android:id="@+id/txtPrecio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -43,7 +42,6 @@
                 android:id="@+id/txtDescripcion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=""
                 android:textSize="14sp" />
 
         </LinearLayout>
@@ -51,9 +49,9 @@
         <Button
             android:id="@+id/buttonComprar"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:background="@drawable/estilo_botones_desbloqueados_facil"
-            android:text="🪙" />
+            android:layout_height="match_parent"
+            android:backgroundTint="#2979FF"
+            android:text="Equipar" />
 
 
     </LinearLayout>

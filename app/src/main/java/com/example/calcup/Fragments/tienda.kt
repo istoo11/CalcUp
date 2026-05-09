@@ -45,43 +45,48 @@ class tienda : Fragment(R.layout.fragment_tienda) {
                 }.decodeList<usuario_personalizable>().map { it.id_cosmetico }
 
                 val cosmeticosDisponibles = cosmeticos.filterNot { it.id in idsComprados }
+                if(cosmeticosDisponibles.isEmpty()){
+                    val cabecera = view!!.findViewById<TextView>(R.id.tituloTienda)
+                    cabecera.text = "\n\nENHORABUENA\nYA DISPONES DE TODOS LOS ARTICULOS"
+                } else {
+                    listaCosmeticos.adapter = object :
+                        ArrayAdapter<personalizables>(requireContext(), 0, cosmeticosDisponibles) {
+                        override fun getView(
+                            posicion: Int,
+                            convertView: View?,
+                            padre: ViewGroup
+                        ): View {
+                            val viewItem = convertView ?: LayoutInflater.from(context)
+                                .inflate(R.layout.cosmetico, padre, false)
 
-                listaCosmeticos.adapter = object :
-                    ArrayAdapter<personalizables>(requireContext(), 0, cosmeticosDisponibles) {
-                    override fun getView(
-                        posicion: Int,
-                        convertView: View?,
-                        padre: ViewGroup
-                    ): View {
-                        val viewItem = convertView ?: LayoutInflater.from(context)
-                            .inflate(R.layout.cosmetico, padre, false)
+                            val objeto = getItem(posicion)!!
 
-                        val objeto = getItem(posicion)!!
+                            val textoPrecio = viewItem.findViewById<TextView>(R.id.txtPrecio)
+                            val txtDesc = viewItem.findViewById<TextView>(R.id.txtDescripcion)
+                            val btn = viewItem.findViewById<Button>(R.id.buttonComprar)
+                            val iconoCosmetico =
+                                viewItem.findViewById<ImageView>(R.id.iconoCosmetico)
+                            btn.text = "Comprar"
 
-                        val textoPrecio = viewItem.findViewById<TextView>(R.id.txtPrecio)
-                        val txtDesc = viewItem.findViewById<TextView>(R.id.txtDescripcion)
-                        val btn = viewItem.findViewById<Button>(R.id.buttonComprar)
-                        val iconoCosmetico = viewItem.findViewById<ImageView>(R.id.iconoCosmetico)
+                            if (objeto.tipo.equals("icono")) {
+                                val imagen = objeto.tipo + "_" + objeto.clave
+                                val resID = context.resources.getIdentifier(
+                                    imagen,
+                                    "drawable",
+                                    context.packageName
+                                )
+                                iconoCosmetico.setImageResource(resID)
+                                val numeroPrecio = (objeto.clave.toInt() * 100)
+                                textoPrecio.text = numeroPrecio.toString()
+                                txtDesc.text = objeto.descripcion
 
-
-                        if (objeto.tipo.equals("icono")) {
-                            val imagen = objeto.tipo + "_" + objeto.clave
-                            val resID = context.resources.getIdentifier(
-                                imagen,
-                                "drawable",
-                                context.packageName
-                            )
-                            iconoCosmetico.setImageResource(resID)
-                            val numeroPrecio = (objeto.clave.toInt() * 100)
-                            textoPrecio.text = numeroPrecio.toString()
-                            txtDesc.text = objeto.descripcion
-
-                            btn.setOnClickListener {
-                                ejecutarCompra(objeto, numeroPrecio)
+                                btn.setOnClickListener {
+                                    ejecutarCompra(objeto, numeroPrecio)
+                                }
                             }
-                        }
 
-                        return viewItem
+                            return viewItem
+                        }
                     }
                 }
             } catch (e: Exception) {
