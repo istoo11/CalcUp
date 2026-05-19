@@ -1,4 +1,4 @@
-# Duolingo de Mates
+# CalcUp
 
 Aplicación móvil tipo Duolingo enfocada en el aprendizaje de matemáticas mediante ejercicios interactivos, niveles y progreso del usuario.
 
