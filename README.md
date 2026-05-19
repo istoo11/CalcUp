@@ -28,7 +28,3 @@ Desarrollar una aplicación educativa gamificada donde los usuarios puedan pract
 ## Estado del proyecto
 
 En desarrollo
-
-## Autor
-
-Samuel
