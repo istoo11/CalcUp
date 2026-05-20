@@ -93,8 +93,8 @@
                     android:layout_marginStart="12dp"
                     android:layout_weight="1"
                     android:background="#FAF9F6"
-                    android:hint="Ingrese el resultado"
-                    android:inputType="numberSigned|numberDecimal"
+                    android:hint="@string/ingrese_el_resultado"
+                    android:inputType="text"
                     android:padding="16dp" />
 
             </LinearLayout>

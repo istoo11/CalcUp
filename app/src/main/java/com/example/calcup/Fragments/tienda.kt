@@ -46,7 +46,7 @@ class tienda : Fragment(R.layout.fragment_tienda) {
 
                 val cosmeticosDisponibles = cosmeticos.filterNot { it.id in idsComprados }
                 if(cosmeticosDisponibles.isEmpty()){
-                    val cabecera = view!!.findViewById<TextView>(R.id.tituloTienda)
+                    val cabecera = requireView().findViewById<TextView>(R.id.tituloTienda)
                     cabecera.text = "\n\nENHORABUENA\nYA DISPONES DE TODOS LOS ARTICULOS"
                 } else {
                     listaCosmeticos.adapter = object :

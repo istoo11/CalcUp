@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
+        android:gravity="center"
         android:orientation="horizontal"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -16,16 +16,25 @@
 
         <LinearLayout
             android:id="@+id/layoutFila"
-            android:layout_width="284dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_width="280dp"
+            android:layout_marginEnd="8dp"
+            android:layout_height="80dp"
+
             android:background="@drawable/estilo_botones_bloqueados"
             android:clipToOutline="true"
             android:elevation="8dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:outlineProvider="background"
-            android:padding="16dp">
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imgIcono"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Icono nivel"
+                android:src="@drawable/cerrado" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -46,32 +55,19 @@
                     android:id="@+id/txtDescripcion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/descripcion_del_nivel"
+                    android:text="OPERACIONESCOMBINADAS CON PARENTESIS"
                     android:textColor="#666666"
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/imgIcono"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:layout_marginStart="12dp"
-                android:contentDescription="Icono nivel"
-                android:src="@drawable/cerrado" />
-
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="8dp">
 
-            <Button
-                android:id="@+id/buttonJugar"
-                android:layout_width="70dp"
-                android:layout_height="60dp"
-                android:text="@string/play" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/buttonJugar"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:text="@string/play" />
+
 
     </LinearLayout>
 

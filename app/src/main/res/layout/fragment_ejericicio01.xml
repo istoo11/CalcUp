@@ -58,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="UNA OPERACION CUALQUIERA"
+                    android:text="X+X = X"
                     android:textColor="#FFFFFF"
                     android:textSize="28sp"
                     android:textStyle="bold" />
@@ -92,8 +92,8 @@
                     android:layout_marginStart="12dp"
                     android:layout_weight="1"
                     android:background="#FAF9F6"
-                    android:hint="Ingrese el resultado"
-                    android:inputType="numberSigned|numberDecimal"
+                    android:hint="@string/ingrese_el_resultado"
+                    android:inputType="text"
                     android:padding="16dp" />
 
             </LinearLayout>

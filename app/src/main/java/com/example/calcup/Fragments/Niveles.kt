@@ -69,8 +69,20 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
 
                         btn.backgroundTintList = null
                         if (nivel.desbloqueado) {
+
                             btn.isEnabled = true
-                            img.setImageResource(R.drawable.abierto)
+                            val imagen = "ilustracion_" + nivel.nivel
+                            var resID = context.resources.getIdentifier(
+                                imagen,
+                                "drawable",
+                                context.packageName
+                            )
+                            if (resID == 0) {
+                                resID = R.drawable.abierto
+                            }
+                            img.setImageResource(resID)
+
+
                             if (nivel.nivel % 10 == 0) {
                                 fila.setBackgroundResource(R.drawable.estilo_botones_examen_final)
                                 btn.setBackgroundResource(R.drawable.estilo_botones_examen_final)
@@ -93,12 +105,14 @@ class Niveles : Fragment(R.layout.fragment_niveles) {
 
                         btn.setOnClickListener {
                             val bundle = bundleOf("infoNivel" to nivel)
-
                             findNavController().navigate(R.id.action_niveles_to_consejo1, bundle)
                         }
 
                         return viewItem
                     }
+                }
+                listaNiveles.post {
+                    listaNiveles.setSelection(response.nivel - 4)
                 }
 
             } catch (e: Exception) {

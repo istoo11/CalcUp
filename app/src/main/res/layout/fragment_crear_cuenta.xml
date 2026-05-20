@@ -5,7 +5,7 @@
     android:id="@+id/createAccountFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@drawable/fondo_login">
 
     <LinearLayout
         android:id="@+id/contenedorCrearCuenta"
@@ -18,6 +18,7 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:padding="32dp"
+        android:background="#CCFFFFFF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="16dp"
-            android:background="#DDDDDD"
+            android:background="#FFFFFF"
             android:hint="Usuario"
             android:inputType="textPersonName"
             android:padding="12dp" />
@@ -48,7 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginBottom="16dp"
-            android:background="#DDDDDD"
+            android:background="#FFFFFF"
             android:hint="Correo electrónico"
             android:inputType="textEmailAddress"
             android:padding="12dp" />
@@ -67,7 +68,7 @@
                 android:id="@+id/editTextCrearCuentaContraseña"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#DDDDDD"
+                android:background="#FFFFFF"
                 android:hint="Contraseña"
                 android:inputType="textPassword"
                 android:padding="12dp" />
@@ -87,7 +88,7 @@
                 android:id="@+id/editTextCrearCuentaContraseñaRepetida"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#DDDDDD"
+                android:background="#FFFFFF"
                 android:hint="Repetir contraseña"
                 android:inputType="textPassword"
                 android:padding="12dp" />
@@ -99,9 +100,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="22dp"
             android:text="*Su contraseña debe contener 7 caracteres o más"
-            android:textColor="#B5B0AE"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:textColor="#000000"
+            android:textSize="14sp"/>
 
         <Button
             android:id="@+id/buttonConfirmar"

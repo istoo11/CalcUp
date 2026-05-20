@@ -1,9 +1,6 @@
 package com.example.calcup.Fragments
 
-import android.content.res.ColorStateList
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +13,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.example.calcup.Activity.MainActivity
-import com.example.calcup.Objetos.Usuario
 import com.example.calcup.Objetos.personalizables
 import com.example.calcup.Objetos.usuario_personalizable
 import com.example.calcup.R
@@ -45,7 +41,7 @@ class inventario : Fragment(R.layout.fragment_inventario) {
 
                 val cosmeticosAdquiridos = cosmeticos.filter { it.id in idsComprados }
                 if(cosmeticosAdquiridos.isEmpty()){
-                    val cabecera = view!!.findViewById<TextView>(R.id.tituloInventario)
+                    val cabecera = requireView().findViewById<TextView>(R.id.tituloInventario)
                     cabecera.text = "\n\nNO DISPONES DE COSMETICOS\nVE A LA SECCION TIENDA PARA ADQUIRIR ARTICULOS"
                 }else {
                     listaCosmeticos.adapter = object :
@@ -83,6 +79,7 @@ class inventario : Fragment(R.layout.fragment_inventario) {
                                         }
                                     }
                                     (activity as? MainActivity)?.cargarDatosMenuLateral()
+                                    Toast.makeText(requireContext(), "Icono cambiado", Toast.LENGTH_SHORT).show()
                                 }
                             }
                             return viewItem
