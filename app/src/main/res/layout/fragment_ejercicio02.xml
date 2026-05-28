@@ -30,7 +30,7 @@
                 android:id="@+id/tvTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/continua_la_serie"
+                android:text="@string/elija_la_opcion_correcta"
                 android:textAlignment="center"
                 android:textColor="#333333"
                 android:textSize="22sp"

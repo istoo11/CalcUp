@@ -23,4 +23,5 @@
     <string name="resuelve_el_siguiente_problema">RESUELVE EL SIGUIENTE PROBLEMA</string>
     <string name="inventario">INVENTARIO</string>
     <string name="bienvenido_a_la_tienda">Bienvenido a la tienda</string>
+    <string name="elija_la_opcion_correcta">Elija la opcion correcta</string>
 </resources>
