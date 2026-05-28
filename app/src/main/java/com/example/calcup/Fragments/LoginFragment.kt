@@ -33,8 +33,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             lifecycleScope.launch {
                 try {
                     supabase.auth.signInWith(Email) {
-                        email = "Romansami40@gmail.com"
-                        password = "Prueba"
                         email = correo
                         password = contrasena
                     }
