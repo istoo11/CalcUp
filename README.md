@@ -24,7 +24,3 @@ Desarrollar una aplicación educativa gamificada donde los usuarios puedan pract
 - Tienda interna donde los usuarios pueden gastar puntos obtenidos
 - Inventario de objetos comprados dentro de la tienda
 - Sistema de feedback en tiempo real (aciertos y errores durante los niveles)
-
-## Estado del proyecto
-
-En desarrollo
