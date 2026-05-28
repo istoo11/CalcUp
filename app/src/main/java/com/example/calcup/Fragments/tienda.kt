@@ -10,6 +10,7 @@ import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.graphics.toColorInt
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.example.calcup.Activity.MainActivity
@@ -26,7 +27,6 @@ import kotlin.Int
 class tienda : Fragment(R.layout.fragment_tienda) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         cargarDatos()
     }
 
@@ -47,7 +47,8 @@ class tienda : Fragment(R.layout.fragment_tienda) {
                 val cosmeticosDisponibles = cosmeticos.filterNot { it.id in idsComprados }
                 if(cosmeticosDisponibles.isEmpty()){
                     val cabecera = requireView().findViewById<TextView>(R.id.tituloTienda)
-                    cabecera.text = "\n\nENHORABUENA\nYA DISPONES DE TODOS LOS ARTICULOS"
+                    cabecera.text = "ENHORABUENA\nYA DISPONES DE TODOS LOS ARTICULOS"
+                    listaCosmeticos.adapter = null
                 } else {
                     listaCosmeticos.adapter = object :
                         ArrayAdapter<personalizables>(requireContext(), 0, cosmeticosDisponibles) {
@@ -68,7 +69,7 @@ class tienda : Fragment(R.layout.fragment_tienda) {
                                 viewItem.findViewById<ImageView>(R.id.iconoCosmetico)
                             btn.text = "Comprar"
 
-                            if (objeto.tipo.equals("icono")) {
+                            if (objeto.tipo == "icono") {
                                 val imagen = objeto.tipo + "_" + objeto.clave
                                 val resID = context.resources.getIdentifier(
                                     imagen,
@@ -84,7 +85,6 @@ class tienda : Fragment(R.layout.fragment_tienda) {
                                     ejecutarCompra(objeto, numeroPrecio)
                                 }
                             }
-
                             return viewItem
                         }
                     }
@@ -112,9 +112,7 @@ class tienda : Fragment(R.layout.fragment_tienda) {
                         }
 
                     cargarDatos()
-
                     (activity as? MainActivity)?.cargarDatosMenuLateral()
-                    Toast.makeText(requireContext(), "Compra realizada!", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(requireContext(), "Puntos insuficientes", Toast.LENGTH_SHORT)
                         .show()

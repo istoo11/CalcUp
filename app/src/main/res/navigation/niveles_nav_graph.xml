@@ -79,4 +79,10 @@
     <action android:id="@+id/action_global_niveles" app:destination="@id/niveles" />
     <action android:id="@+id/action_global_tienda" app:destination="@id/tienda" />
     <action android:id="@+id/action_global_inventario" app:destination="@id/inventario" />
+    <fragment
+        android:id="@+id/cambiarNickname"
+        android:name="com.example.calcup.Fragments.CambiarNickname"
+        android:label="fragment_cambiar_nickname"
+        tools:layout="@layout/fragment_cambiar_nickname" />
+    <action android:id="@+id/action_global_cambiarNickname" app:destination="@id/cambiarNickname" />
 </navigation>

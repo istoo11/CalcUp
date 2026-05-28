@@ -30,7 +30,7 @@
                 android:id="@+id/tvTitulo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="RESUELVE EL SIGUIENTE PROBLEMA"
+                android:text="@string/resuelve_el_siguiente_problema"
                 android:textAlignment="center"
                 android:textColor="#333333"
                 android:textSize="22sp"

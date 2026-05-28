@@ -17,4 +17,10 @@
     <string name="mejores_tiempos">Mejores tiempos</string>
     <string name="continuar">CONTINUAR</string>
     <string name="ingrese_el_resultado">Ingrese el resultado</string>
+    <string name="repite_el_nickname">Repite el Nickname</string>
+    <string name="nuevo_nickname">Nuevo Nickname</string>
+    <string name="cambiar">Cambiar</string>
+    <string name="resuelve_el_siguiente_problema">RESUELVE EL SIGUIENTE PROBLEMA</string>
+    <string name="inventario">INVENTARIO</string>
+    <string name="bienvenido_a_la_tienda">Bienvenido a la tienda</string>
 </resources>

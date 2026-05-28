@@ -212,7 +212,7 @@
   },
   {
     "nivel": 10,
-    "descripcion": "OPERACIONES COMBINADAS CON PARÉNTESIS",
+    "descripcion": "EXAMEN RECAPITULATIVO",
     "consejos": [
       "Primero resuelve lo que hay dentro de los paréntesis.",
       "Después haz multiplicaciones y divisiones.",
@@ -239,12 +239,9 @@
     ],
     "SolucionEJ03": ["20","7","2","15","3"]
   },
-
-
-
   {
     "nivel": 11,
-    "descripcion": "Suma de fracciones",
+    "descripcion": "SUMA DE FRACCIONES",
     "consejos": [
       "Busca primero un denominador común fácil.",
       "Si un denominador es múltiplo del otro, conviértelo directamente (ej: 1/2 = 2/4).",
@@ -255,7 +252,6 @@
     ],
     "EJ01": ["1/2 + 1/4", "2/3 + 1/6", "3/8 + 1/8", "1/5 + 2/5", "1/3 + 1/9"],
     "SolucionEJ01": ["3/4", "5/6", "1/2", "3/5", "4/9"],
-
     "EJ02": [
       "1/2, 2, 3/2, X",
       "3, 11/3, 13/3, X",
@@ -263,28 +259,99 @@
       "30/6, 40/6, 50/6, X",
       "19/5, 26/5, 33/5, X"],
     "SolucionEJ02": ["2", "5", "9", "10", "15"],
-
-
     "EJ03": [
-      "Un ordenador cuesta 2^3 euros y luego se multiplica por 2^2, ¿cuánto cuesta en total?",
-      "Un juego cuesta 4^2 euros, y luego se divide entre 2^2, ¿cuánto pagas?",
-      "Una botella cuesta 2^3 euros, se eleva al cuadrado y luego se divide entre 2^4, ¿cuánto es?",
-      "Un reloj cuesta 3^2 euros, se eleva al cubo y luego se divide entre 3^4, ¿cuánto cuesta?",
-      "Un libro cuesta 2^2 euros, se eleva al cubo y luego se divide entre 2^3, ¿cuánto pagas?"
+      "Si me he comido 1/2 de tarta y luego otro 1/2. ¿Cuanto me he comido en total?",
+      "Si he bebido 3/4 de una botella y luego otro 5/4. ¿Cuanto he bebido en total?",
+      "Si he recorrido 2/3 del camino y luego 7/3. ¿Cuanto he recorrido en total?",
+      "Si tengo 5/6 de una pizza y me dan 19/6 más. ¿Cuanta pizza tengo ahora?",
+      "Si he leído 3/8 de un libro y después 37/8 más. ¿Cuanto he leído en total?"
     ],
-    "SolucionEJ03": ["32", "4", "4", "9", "4"]
+    "SolucionEJ03": ["1", "2", "3", "4", "5"]
   },
-
-
-
-
-
-
-
-
   {
-    "nivel": 22,
-    "descripcion": " (22) Operaciones con potencias",
+    "nivel": 12,
+    "descripcion": "RESTA DE FRACCIONES",
+    "consejos": [
+      "Busca primero un denominador común fácil.",
+      "Si un denominador es múltiplo del otro, conviértelo directamente (ej: 1/2 = 2/4).",
+      "Solo resta numeradores cuando los denominadores sean iguales.",
+      "Simplifica la fracción antes o después de restar si es posible.",
+      "Usa equivalencias rápidas: 1/2 = 2/4 = 3/6, 1/4 = 2/8, 1/3 = 2/6.",
+      "Las soluciones simpre estaran reducidas al maximo."
+    ],
+    "EJ01": ["3/4 - 1/4", "5/6 - 1/6", "7/8 - 3/8", "4/5 - 2/5", "8/9 - 2/9"],
+    "SolucionEJ01": ["1/2", "2/3", "1/2", "2/5", "2/3"],
+    "EJ02": ["5, 9/2, 4, X",
+      "12/3, 9/3, 6/3, X",
+      "20/5, 17/5, 14/5, X",
+      "7, 13/2, 6, X",
+      "15/4, 12/4, 9/4, X"
+    ],
+    "SolucionEJ02": ["7/2", "1", "11/5", "11/2", "6/4"],
+    "EJ03": [
+      "Si tenía 5/2 litros de agua y he gastado 3/2. ¿Cuanto me queda?",
+      "Si recorrí 9/3 kilómetros y retrocedí 3/3. ¿Cuanto me queda recorrido?",
+      "Si tenía 16/4 trozos de pizza y me comí 4/4. ¿Cuantos quedan?",
+      "Si he leído 25/5 páginas y olvidé 10/5. ¿Cuantas recuerdo?",
+      "Si tenía 18/6 barras de chocolate y regalé 6/6. ¿Cuantas me quedan?"
+    ],
+    "SolucionEJ03": ["1", "2", "3", "4", "2"]
+  },
+  {
+    "nivel": 13,
+    "descripcion": "MULTIPLICACIÓN DE FRACCIONES",
+    "consejos": [
+      "Multiplica numerador con numerador y denominador con denominador.",
+      "Simplifica antes o después de multiplicar para facilitar el cálculo.",
+      "Busca cancelaciones cruzadas para evitar números grandes.",
+      "Convierte enteros a fracción (ej: 3 = 3/1) cuando sea necesario."
+    ],
+    "EJ01": ["1/2 x 1/3", "2/5 x 3/4", "3/7 x 2/3", "4/9 x 3/8", "5/6 x 6/10"],
+    "SolucionEJ01": ["1/6", "3/10", "6/21", "12/72", "30/60"
+    ],
+    "EJ02": [
+      "1/2, 1/4, 1/8, X",
+      "2/3, 4/9, 8/27, X",
+      "3/5, 6/25, 12/125, X",
+      "5/2, 5/4, 5/8, X",
+      "7/3, 14/9, 28/27, X"
+    ],
+    "SolucionEJ02": ["1/16", "16/81", "24/625", "5/16", "56/81"],
+    "EJ03": [
+      "Si tengo 1/2 de una pizza y me como 1/3 de esa parte, ¿cuánta pizza he comido?",
+      "Si un tanque está lleno a 3/4 y se usa 2/3 de lo que hay, ¿cuánto se ha usado?",
+      "Si tengo 5/6 de un camino y recorro 3/5 de eso, ¿qué fracción del total recorro?",
+      "Si una receta usa 2/3 de taza y hago 3/4 de la receta, ¿cuánta taza uso?",
+      "Si tengo 7/8 de litro y gasto 2/7 de eso, ¿cuánto gasto?"
+    ],
+    "SolucionEJ03": ["1/6", "6/12", "15/30", "6/12", "14/56"]
+  },
+  {
+    "nivel": 14,
+    "descripcion": "DIVISIÓN DE FRACCIONES",
+    "consejos": [
+      "Para dividir fracciones, multiplica por la inversa de la segunda fracción.",
+      "No simplifiques los resultados, déjalos tal cual salen.",
+      "Invierte la segunda fracción (cambia numerador por denominador).",
+      "Convierte los enteros a fracción (ej: 3 = 3/1).",
+      "Multiplica numerador con numerador y denominador con denominador."
+    ],
+    "EJ01": ["1/2 ÷ 1/3", "3/4 ÷ 2/5", "5/6 ÷ 1/2", "7/8 ÷ 3/4", "2/3 ÷ 5/9"],
+    "SolucionEJ01": ["3/2", "15/8", "10/6", "28/24", "18/15"],
+    "EJ02": ["2/3 ÷ 1/6", "4/5 ÷ 2/7", "3/8 ÷ 9/10", "6/11 ÷ 3/4", "5/12 ÷ 2/9"],
+    "SolucionEJ02": ["12/3", "28/10", "30/72", "24/33", "45/24"],
+    "EJ03": [
+      "Si tengo 3/4 de pizza y cada ración es 1/8, ¿cuántas raciones hay?",
+      "Si tengo 5/6 de litro y cada vaso es 1/3, ¿cuántos vasos hay?",
+      "Si recorro 7/10 km y cada tramo es 1/5 km, ¿cuántos tramos hago?",
+      "Si tengo 4/9 de tarta y cada porción es 2/9, ¿cuántas porciones hay?",
+      "Si tengo 6/7 de chocolate y cada pieza es 1/14, ¿cuántas piezas hay?"
+    ],
+    "SolucionEJ03": ["42/8", "15/6", "35/10", "36/18", "84/7"]
+  },
+  {
+    "nivel": 15,
+    "descripcion": "POTENCIAS Y EXPONENTES",
     "consejos": [
       "Recuerda que multiplicar potencias con la misma base suma los exponentes.\n (5^3 * 5^3 = 5^6)",
       "Para dividir potencias de la misma base, resta los exponentes.\n (5^6 / 5^3 = 5^3)",
@@ -307,7 +374,7 @@
   },
   {
     "nivel": 16,
-    "descripcion": "Porcentajes y proporciones",
+    "descripcion": "PORCENTAJES",
     "consejos": [
       "El 10% de un número es mover la coma un lugar a la izquierda.",
       "Para calcular el 50% de un número solo tienes que dividirlo entre 2.",
@@ -323,14 +390,207 @@
     "Un producto cuesta 100 euros, le aplican un descuento del 20% y luego sube un 10%, ¿cuánto cuesta ahora?",
     "Una camiseta vale 50 euros, sube un 15% y después tiene un descuento del 5%, ¿cuál es el nuevo precio?",
     "Un videojuego cuesta 80 euros, tiene un descuento del 25% y luego sube un 30%, ¿cuánto pagas?",
-    "Un móvil cuesta 200 euros, sube un 10% y luego le aplican un descuento del 15%, ¿cuál es su precio final?",
+    "Un móvil cuesta 200 euros, sube un 10% y luego le aplican un descuento del 10%, ¿cuál es su precio final?",
     "Un libro cuesta 40 euros, le aplican un descuento del 50% y luego se incrementa el precio un 20%, ¿cuánto pagas?"
   ],
-    "SolucionEJ03": ["88", "54", "84", "187", "24"]
+    "SolucionEJ03": ["88", "54", "84", "198", "24"]
+  },
+  {
+    "nivel": 17,
+    "descripcion": "RAÍCES CUADRADAS",
+    "consejos": [
+      "Busca números cuadrados perfectos para simplificar más rápido.",
+      "Descompón el número en factores para extraer la raíz.",
+      "√(a·b) = √a · √b cuando a o b son cuadrados perfectos.",
+      "Memoriza los cuadrados: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225.",
+      "Si no es cuadrado perfecto, simplifica al máximo posible."
+    ],
+    "EJ01": ["√4", "√9", "√16", "√25", "√36"],
+    "SolucionEJ01": ["2", "3", "4", "5", "6"],
+    "EJ02": [
+      "√1, √4, √9, √16, X",
+      "√4, √9, √16, √25, X",
+      "√9, √16, √25, √36, X",
+      "√16, √25, √36, √49, X",
+      "√25, √36, √49, √64, X"
+    ],
+    "SolucionEJ02": ["5", "6", "7", "8", "9"],
+    "EJ03": [
+      "Si el lado de un cuadrado mide √49 cm, ¿cuánto mide el lado?",
+      "Si un terreno cuadrado tiene área 64 m², ¿cuánto mide cada lado?",
+      "Si la diagonal de un problema simplifica a √81, ¿cuánto vale?",
+      "Si un cálculo da √100 kg de carga, ¿cuál es el resultado?",
+      "Si una figura tiene valor √144 en cada lado, ¿cuánto mide?"
+    ],
+    "SolucionEJ03": ["7", "8", "9", "10", "12"]
+  },
+  {
+    "nivel": 18,
+    "descripcion": "REGLA DE 3",
+    "consejos": [
+      "Si una magnitud aumenta, la otra también aumenta.",
+      "Organiza los datos en tabla antes de resolver.",
+      "Multiplica en cruz para encontrar el valor desconocido.",
+      "Asegúrate de que todas las unidades sean coherentes.",
+      "Comprueba que el resultado tenga sentido en el contexto."
+    ],
+    "EJ01": [
+      "Si 2 kg cuestan 6€, ¿cuánto cuestan 5 kg?",
+      "Si 3 horas de trabajo producen 12 piezas, ¿cuántas piezas en 6 horas?",
+      "Si 4 cuadernos cuestan 8€, ¿cuánto cuestan 10 cuadernos?",
+      "Si 5 litros llenan 20 vasos, ¿cuántos vasos llenan 2 litros?",
+      "Si 6 manzanas cuestan 3€, ¿cuánto cuestan 12 manzanas?"
+    ],
+    "SolucionEJ01": ["15", "24", "20", "8", "6"],
+    "EJ02": [
+      "2, 4, 6, X",
+      "3, 6, 9, X",
+      "5, 10, 15, X",
+      "4, 8, 12, X",
+      "6, 12, 18, X"
+    ],
+    "SolucionEJ02": ["8", "12", "20", "16", "24"],
+    "EJ03": [
+      "Si 4 kg cuestan 10€, ¿cuánto cuestan 7 kg?",
+      "Si 2 horas producen 14 piezas, ¿cuántas piezas en 5 horas?",
+      "Si 3 litros llenan 9 vasos, ¿cuántos vasos llenan 8 litros?",
+      "Si 6 cuadernos cuestan 18€, ¿cuánto cuestan 11 cuadernos?",
+      "Si 5 máquinas producen 25 piezas, ¿cuántas piezas producen 9 máquinas?"
+    ],
+    "SolucionEJ03": ["17.5", "35", "24", "33", "45"]
+  },
+  {
+    "nivel": 19,
+    "descripcion": "ECUACIONES",
+    "consejos": [
+      "Aisla la incógnita (x) dejando todo lo demás al otro lado.",
+      "Si sumas o restas en un lado, haz lo mismo en el otro.",
+      "Si x está multiplicado, pasa dividiendo.",
+      "Si x está dividiendo, pasa multiplicando.",
+      "Simplifica siempre antes de despejar para hacerlo más fácil.",
+      "Comprueba sustituyendo el valor de x al final."
+    ],
+    "EJ01": [
+      "x + 5 = 12",
+      "x - 3 = 9",
+      "2x = 14",
+      "x / 4 = 6",
+      "3x + 2 = 11"
+    ],
+    "SolucionEJ01": ["7", "12", "7", "24", "3"],
+    "EJ02": [
+      "2x + 6 = 18",
+      "3x - 5 = 16",
+      "x / 5 + 2 = 6",
+      "4x = 32",
+      "5x - 10 = 0"
+    ],
+    "SolucionEJ02": ["6", "7", "20", "8", "2"],
+    "EJ03": [
+      "Si a un número le sumo 8 y obtengo 20, ¿qué número es?",
+      "Si el doble de un número es 18, ¿qué número es?",
+      "Si un número dividido entre 3 es 7, ¿qué número es?",
+      "Si a un número le resto 6 y obtengo 10, ¿qué número es?",
+      "Si el triple de un número más 1 es 22, ¿qué número es?"
+    ],
+    "SolucionEJ03": ["12", "9", "21", "16", "7"]
+  },
+  {
+    "nivel": 20,
+    "descripcion": "EXAMEN RECAPITULATIVO",
+    "consejos": [
+      "Resuelve primero lo que esté dentro de paréntesis.",
+      "En fracciones, busca denominador común antes de sumar o restar.",
+      "Las potencias se resuelven antes que sumas y restas.",
+      "Un porcentaje es siempre 'parte de 100'.",
+      "Las raíces cuadradas buscan un número que multiplicado por sí mismo dé el resultado.",
+      "En ecuaciones de primer grado, despeja la x paso a paso."
+    ],
+    "EJ01": ["1/2 + 1/4", "3/5 - 1/5", "2/3 × 3/4", "5/6 ÷ 2/3", "1/3 + 2/6"],
+    "SolucionEJ01": ["6/8", "2/5", "6/12", "15/12", "4/6"],
+    "EJ02": ["2² + 3²", "5² - 2²", "√16 + √9", "√25 - √4", "3² + 2² + 1²"],
+    "SolucionEJ02": ["13", "21", "7", "3", "14"],
+    "EJ03": [
+      "El 20% de 50",
+      "El 10% de 200",
+      "El 25% de 80",
+      "El 50% de 36",
+      "El 5% de 1000"
+    ],
+    "SolucionEJ03": ["10", "20", "20", "18", "50"]
+  },
+  {
+    "nivel": 21,
+    "descripcion": "ECUACIONES DE SEGUNDO GRADO",
+    "consejos": [
+      "Las ecuaciones de segundo grado tienen una x².",
+      "Hay que encontrar un número que al multiplicarse y sumarse dé los valores correctos.",
+      "Muchas se pueden resolver pensando números sencillos.",
+      "Por ejemplo x² - 5x + 6 = 0 se resuelve con 2 y 3.",
+      "Porque 2 × 3 = 6 y 2 + 3 = 5."
+    ],
+    "EJ01": [
+      "x² - 4x + 4 = 0",
+      "x² + 6x + 9 = 0",
+      "x² - 10x + 25 = 0",
+      "x² - 8x + 16 = 0",
+      "x² + 2x + 1 = 0"
+    ],
+    "SolucionEJ01": ["2", "-3", "5", "4", "-1"],
+    "EJ02": [
+      "x² - 2x + 1 = 0",
+      "x² + 4x + 4 = 0",
+      "x² - 6x + 9 = 0",
+      "x² - 10x + 25 = 0"
+    ],
+    "SolucionEJ02": ["1", "-2", "3", "5"],
+    "EJ03": [
+      "Un número multiplicado por sí mismo menos 4 veces el número más 4 da 0. ¿Qué número es?",
+      "El cuadrado de un número más 6 veces el número más 9 da 0. ¿Cuál es?",
+      "Un número al cuadrado menos 10 veces el número más 25 da 0. ¿Qué número da solución?",
+      "Si x² - 8x + 16 = 0, ¿cuánto vale x?",
+      "Si x² + 2x + 1 = 0, ¿qué valor puede tomar x?"
+    ],
+    "SolucionEJ03": ["2", "-3", "5", "4", "-1"]
+  },
+  {
+    "nivel": 22,
+    "descripcion": "FUNCIONES",
+    "consejos": [
+      "Una función es una máquina que transforma un número en otro.",
+      "Sustituye la x por el número dado y calcula.",
+      "Respeta el orden: paréntesis, multiplicaciones y sumas/restas.",
+      "Si hay x², primero eleva al cuadrado.",
+      "Las funciones lineales suelen ser del tipo f(x) = ax + b."
+    ],
+    "EJ01": [
+      "Siendo f(x) = x + 2, calcula f(3)",
+      "Siendo f(x) = x - 5, calcula f(10)",
+      "Siendo f(x) = 2x, calcula f(4)",
+      "Siendo f(x) = x², calcula f(3)",
+      "Siendo f(x) = x + 1, calcula f(-2)"
+    ],
+    "SolucionEJ01": ["5", "5", "8", "9", "-1"],
+    "EJ02": [
+      "f(x) = x + 3\nCalcule f(2)",
+      "f(x) = x - 4\nCalcule f(10)",
+      "f(x) = 2x\nCalcule f(5)",
+      "f(x) = x²\nCalcule f(3)",
+      "f(x) = x + 1\nCalcule f(7)"
+    ],
+    "SolucionEJ02": ["5", "6", "10", "9", "8"],
+    "EJ03": [
+      "Una función asigna a cada número su valor aumentado en 2. Si introduces el número 5, ¿qué resultado obtienes?",
+      "En una máquina matemática, cada número se multiplica por 3. Si introduces el 4, ¿qué número sale?",
+      "Una función resta 6 unidades a cualquier número que entra. Si entra el 10, ¿qué valor devuelve?",
+      "El cuadrado de un número se calcula en una función. Si introduces el 5, ¿qué resultado da?",
+      "Una función duplica un número y luego le suma 3. Si introduces el 6, ¿qué obtienes?"
+    ],
+    "SolucionEJ03": ["7", "12", "4", "25", "15"]
   },
   {
     "nivel": 23,
-    "descripcion": "Usando logaritmos",
+    "descripcion": "LOGARITMOS",
     "consejos": [
       "Existen varios logaritmos, en este caso se usaran los de base 10.",
       "Para estos logaritmos solo hay que contar el numero de ceros.",
@@ -341,14 +601,245 @@
     "EJ01": ["log10(1000)", "log10(100)", "log10(10)", "log10(0.001)", "log10(0.0001)"],
     "SolucionEJ01": ["3", "2", "1", "-3", "-4"],
     "EJ02": ["log10(1), log10(10), log10(100), X", "log10(0.1), log10(0.01), log10(0.001), X", "log10(0.01), log10(0.1), log10(1), X", "100, 1000, 10000, X"],
-    "SolucionEJ02": ["3", "100", "10000", "100000", "10"],
+    "SolucionEJ02": ["3", "-4", "1", "100000"],
     "EJ03": [
       "El logaritmo base 10 de un número es 3, ¿cuál es el número?",
       "El logaritmo base 10 de un número es 2, ¿cuál es el número?",
       "Si log10(x) = 0, ¿cuánto vale x?",
       "Si log10(x) = 4, ¿cuánto vale x?",
-      "Un número x tiene log10(x) = 1, ¿cuál es x?"
+      "Si log10(x) = 1, ¿cuál es x?"
     ],
     "SolucionEJ03": ["1000", "100", "1", "10000", "10"]
+  },
+  {
+    "nivel": 24,
+    "descripcion": "TRIGONOMETRÍA",
+    "consejos": [
+      "En trigonometría básica es clave el círculo unitario.",
+      "Identidad fundamental: sin²(x) + cos²(x) = 1.",
+      "La tangente se define como tan(x) = sin(x) / cos(x).",
+      "Algunos valores importantes: sin(30°)=1/2, cos(30°)=√3/2, sin(45°)=√2/2, cos(45°)=√2/2."
+    ],
+    "EJ01": [
+      "sin²(30°) + cos²(30°)", "tan(45°)", "sin(90°)", "cos(0°)", "sin(0°)"],
+    "SolucionEJ01": ["1", "1", "1", "1", "0"],
+    "EJ02": [
+      "sin(0°), sin(30°), sin(45°), X",
+      "cos(0°), cos(30°), cos(60°), X",
+      "0, 1/2, √2/2, √3/2, X",
+      "tan(15°), tan(25°), tan(35°), X"
+    ],
+    "SolucionEJ02": ["1", "0", "1", "1"],
+    "EJ03": [
+      "Si sin(x) = 1/2, ¿cuánto vale x en grados?",
+      "Si cos(x) = √3/2, ¿qué ángulo es x?",
+      "Si tan(x) = 1, ¿cuál es el valor de x?",
+      "Si sin(x) = 0, ¿qué ángulo puede ser x?",
+      "Usando sin²(x) + cos²(x) = 1, si sin(x)=1, ¿cuánto vale cos(x) (positivo)?"
+    ],
+    "SolucionEJ03": ["30", "30", "45", "0", "0"]
+  },
+  {
+    "nivel": 25,
+    "descripcion": "FACTOR COMÚN",
+    "consejos": [
+      "El factor común es el número o letra que se repite en todos los términos.",
+      "Se saca fuera del paréntesis.",
+      "Ejemplo: 2x + 4 = 2(x + 2).",
+      "Si todos los términos tienen una misma variable, también se puede sacar.",
+      "Siempre comprueba multiplicando para verificar el resultado."
+    ],
+    "EJ01": ["2x + 4", "3x + 6", "5x + 10", "7x + 14", "x + 2x"],
+    "SolucionEJ01": ["2", "3", "5", "7", "x"],
+    "EJ02": [
+      "2x + 4x + 6x + 8",
+      "3x + 6 + 9x",
+      "x + 2x + 3x + 4x + 5x",
+      "5x + 10"
+    ],
+    "SolucionEJ02": ["2", "3", "x", "5"],
+    "EJ03": [
+      "Saca factor común en: 6x + 12 = ?",
+      "Saca factor común en: 8x + 16x = ?",
+      "Saca factor común en: 9x + 3 = ?",
+      "Saca factor común en: 10x + 20 = ?",
+      "Saca factor común en: 12x + 6x = ?"
+    ],
+    "SolucionEJ03": ["6", "8x", "3", "10", "6x"]
+  },
+  {
+    "nivel": 26,
+    "descripcion": "VOLÚMENES",
+    "consejos": [
+      "El volumen de un cubo es l³.",
+      "El volumen de un prisma rectangular es largo × ancho × alto.",
+      "El radio es la mita del diametro.",
+      "Asegúrate de multiplicar correctamente todas las dimensiones.",
+      "Los resultados en este nivel son números enteros."
+    ],
+    "EJ01": [
+      "Cual es el volumen de un cubo de lado 2",
+      "Cual es el volumen de un cubo de lado 3",
+      "Cual es el volumen de un prisma 2 × 3 × 4",
+      "Cual es el volumen de un prisma 5 × 2 × 3",
+      "Cual es el volumen de un prisma 4 × 4 × 2"
+    ],
+    "SolucionEJ01": ["8", "27", "24", "30", "32"],
+    "EJ02": [
+      "2³, 3³,4³,X",
+      "3³,4³,5³,X",
+      "4³,5³,6³,X",
+      "5³,6³,7³,X"
+    ],
+    "SolucionEJ02": ["125", "216", "343", "512"],
+    "EJ03": [
+      "Si un cubo tiene lado 3, ¿cuál es su volumen?",
+      "Si un prisma es 2×2×5, ¿cuál es su volumen?",
+      "Si un cubo tiene volumen 64, ¿cuánto mide su lado?",
+      "Si un prisma es 1×3×4, ¿cuál es su volumen?",
+      "Si una esfera tiene diametro 6, ¿cuál es su radio?"
+    ],
+    "SolucionEJ03": ["27", "20", "4", "12", "3"]
+  },
+  {
+    "nivel": 27,
+    "descripcion": "SISTEMAS DE ECUACIONES",
+    "consejos": [
+      "Puedes resolver por sustitución o reducción.",
+      "Busca eliminar una variable sumando o restando ecuaciones.",
+      "Comprueba siempre sustituyendo el resultado.",
+      "Mantén ordenadas las x y las y.",
+      "Los resultados suelen ser números enteros fáciles."
+    ],
+    "EJ01": [
+      "ENCUENTRA EL VALOR DE X\nx + y = 7\nx - y = 1",
+      "ENCUENTRA EL VALOR DE X\nx + y = 10\nx - y = 2",
+      "ENCUENTRA EL VALOR DE X\nx + y = 9\nx - y = 3",
+      "ENCUENTRA EL VALOR DE X\nx + y = 12\nx - y = 4",
+      "ENCUENTRA EL VALOR DE X\nx + y = 8\nx - y = 0"
+    ],
+    "SolucionEJ01": ["4", "6", "6", "8", "4"],
+    "EJ02": [
+      "ENCUENTRA EL VALOR DE X\nx + y = 6\n2x + y = 9",
+      "ENCUENTRA EL VALOR DE X\nx + y = 8\nx - y = 2",
+      "ENCUENTRA EL VALOR DE X\n2x + y = 7\nx + y = 5",
+      "ENCUENTRA EL VALOR DE X\n3x + y = 12\nx - y = 2",
+      "ENCUENTRA EL VALOR DE X\n2x + 2y = 14\nx - y = 1"
+    ],
+    "SolucionEJ02": ["3", "5", "2", "4", "5"],
+    "EJ03": [
+      "ENCUENTRA EL VALOR DE X\nx + y = 12\nx - y = 2",
+      "ENCUENTRA EL VALOR DE X\n2x + y = 13\nx - y = 4",
+      "ENCUENTRA EL VALOR DE X\nx + y = 9\n2x + y = 14",
+      "ENCUENTRA EL VALOR DE X\n3x + y = 18\nx - y = 4",
+      "ENCUENTRA EL VALOR DE X\n2x + 3y = 19\nx + y = 7"
+    ],
+    "SolucionEJ03": ["7", "5", "5", "6", "4"]
+  },
+  {
+    "nivel": 28,
+    "descripcion": "PROBABILIDAD",
+    "consejos": [
+      "La probabilidad es casos favorables entre casos totales.",
+      "Siempre simplifica la fracción final si es posible.",
+      "Todos los resultados posibles deben contarse bien.",
+      "La probabilidad siempre está entre 0 y 1.",
+      "Por ello la solucion son fracciones.",
+      "Si todos los casos son iguales, divide directamente."
+    ],
+    "EJ01": [
+      "En una bolsa hay 3 bolas rojas y 2 azules. ¿Probabilidad de sacar una roja?",
+      "En un dado, ¿probabilidad de sacar un 6?",
+      "En una moneda, ¿probabilidad de cara?",
+      "En una bolsa hay 4 verdes y 1 negra. ¿Probabilidad de negra?",
+      "En un dado, ¿probabilidad de sacar un número par?"
+    ],
+    "SolucionEJ01": ["3/5", "1/6", "1/2", "1/5", "1/2"],
+    "EJ02": [
+      "En una bolsa hay 2 rojas, 3 azules y 5 verdes. ¿Probabilidad de roja?",
+      "En un dado, ¿probabilidad de sacar un número mayor que 4?",
+      "En una moneda, ¿probabilidad de cruz?",
+      "En una bolsa hay 6 bolas, 2 son negras. ¿Probabilidad de no negra?",
+      "En un dado, ¿probabilidad de sacar un 1?"
+    ],
+    "SolucionEJ02": ["2/10", "2/6", "1/2", "4/6", "1/6"],
+    "EJ03": [
+      "En una bolsa hay 5 rojas, 5 azules y 10 verdes. ¿Probabilidad de azul?",
+      "En un dado, ¿probabilidad de sacar un número menor que 3?",
+      "En una moneda, ¿probabilidad de cara o cruz?",
+      "En una bolsa hay 3 negras y 7 blancas. ¿Probabilidad de blanca?",
+      "En un dado, ¿probabilidad de sacar un número mayor que 2?"
+    ],
+    "SolucionEJ03": ["5/20", "2/6", "2/2", "7/10", "4/6"]
+  },
+  {
+    "nivel": 29,
+    "descripcion": "PROBLEMAS DE LECTURA",
+    "consejos": [
+      "Lee el enunciado más de una vez antes de operar.",
+      "Identifica qué datos son importantes y cuáles no.",
+      "Define una variable (normalmente x) para lo desconocido.",
+      "Traduce el texto a una ecuación paso a paso.",
+      "Comprueba que el resultado tiene sentido en el contexto."
+    ],
+    "EJ01": [
+      "En una clase hay el doble de chicos que de chicas. Si en total hay 30 alumnos, ¿cuántas chicas hay?",
+      "Un número aumentado en 8 es igual al triple del mismo número. ¿Qué número es?",
+      "En una tienda, un producto cuesta 5€ más que otro. Si entre los dos cuestan 25€, ¿cuánto cuesta el barato?",
+      "Un padre tiene 24 años más que su hijo. Dentro de 6 años, el padre tendrá el doble de edad que el hijo. ¿Qué edad tiene el hijo ahora?",
+      "He pensado un número. Si le resto 7 y luego lo multiplico por 2, obtengo 18. ¿Qué número es?"
+    ],
+    "SolucionEJ01": ["10", "4", "10", "18", "16"],
+    "EJ02": [
+      "En un aparcamiento hay coches y motos. En total hay 20 vehículos y 60 ruedas. ¿Cuántos coches hay?",
+      "Un número multiplicado por 3 y luego restado 5 da 16. ¿Cuál es el número?",
+      "En una caja hay monedas de 1€ y 2€. Hay 15 monedas y suman 24€. ¿Cuántas monedas de 2€ hay?",
+      "Un número disminuido en su mitad es igual a 10. ¿Qué número es?",
+      "La suma de dos números consecutivos es 41. ¿Cuáles son esos números (da el menor)?"
+    ],
+    "SolucionEJ02": ["10", "7", "9", "20", "20"],
+    "EJ03": [
+      "Un libro y un cuaderno cuestan juntos 18€. El libro cuesta 6€ más que el cuaderno. ¿Cuánto cuesta el cuaderno?",
+      "En una familia, la suma de las edades de dos hermanos es 27. Uno tiene 3 años más que el otro. ¿Edad del menor?",
+      "Un depósito tiene agua. Si se sacan 15 litros, queda la mitad del total inicial. ¿Cuántos litros había al principio?",
+      "Un número al que se le suma su doble da 36. ¿Qué número es?",
+      "En una clase, el número de alumnos es tal que si se añaden 4, se obtienen 30. ¿Cuántos alumnos hay?"
+    ],
+    "SolucionEJ03": ["6", "12", "30", "12", "26"]
+  },
+  {
+    "nivel": 30,
+    "descripcion": "EXAMEN RECAPITULATIVO",
+    "consejos": [
+      "Identifica primero el tipo de problema antes de resolver.",
+      "En operaciones, respeta siempre el orden: potencias, multiplicaciones/divisiones, sumas/restas.",
+      "En fracciones, busca simplificar o denominador común si es necesario.",
+      "En ecuaciones, despeja la incógnita paso a paso.",
+      "En problemas de texto, traduce primero a matemáticas antes de operar."
+    ],
+    "EJ01": [
+      "1/2 + 1/3 × 3/4",
+      "2² + 3² - 4",
+      "El 25% de 160",
+      "√81 + 2²",
+      "3x + 5 = 20"
+    ],
+    "SolucionEJ01": ["3/4", "9", "40", "13", "5"],
+    "EJ02": [
+      "x² - 5x + 6 = 0",
+      "2x + 3 = 11",
+      "√49 + √16",
+      "El 10% de 300",
+      "1/2 + 1/4"
+    ],
+    "SolucionEJ02": ["2", "4", "11", "30", "3/4"],
+    "EJ03": [
+      "Si f(x) = 2x + 1, ¿cuánto vale f(4)?",
+      "x + y = 10, x - y = 2 (valor de x)",
+      "En una bolsa hay 2 rojas y 3 azules. Probabilidad de roja",
+      "Un número menos 7 da 10. ¿Qué número es?",
+      "√64 + 3²"
+    ],
+    "SolucionEJ03": ["9", "6", "2/5", "17", "17"]
   }
 ]

@@ -19,8 +19,10 @@ import com.example.calcup.R
 import io.github.jan.supabase.auth.auth
 import io.github.jan.supabase.postgrest.from
 import kotlinx.coroutines.launch
+import androidx.core.graphics.toColorInt
 
 class inventario : Fragment(R.layout.fragment_inventario) {
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         cargarDatos()
@@ -42,7 +44,7 @@ class inventario : Fragment(R.layout.fragment_inventario) {
                 val cosmeticosAdquiridos = cosmeticos.filter { it.id in idsComprados }
                 if(cosmeticosAdquiridos.isEmpty()){
                     val cabecera = requireView().findViewById<TextView>(R.id.tituloInventario)
-                    cabecera.text = "\n\nNO DISPONES DE COSMETICOS\nVE A LA SECCION TIENDA PARA ADQUIRIR ARTICULOS"
+                    cabecera.text = "NO DISPONES DE COSMETICOS\nVE A LA SECCION TIENDA PARA ADQUIRIR ARTICULOS"
                 }else {
                     listaCosmeticos.adapter = object :
                         ArrayAdapter<personalizables>(requireContext(), 0, cosmeticosAdquiridos) {
@@ -58,8 +60,7 @@ class inventario : Fragment(R.layout.fragment_inventario) {
 
                             val btn = viewItem.findViewById<Button>(R.id.buttonComprar)
                             val txtTitulo = viewItem.findViewById<TextView>(R.id.txtPrecio)
-                            val iconoCosmetico =
-                                viewItem.findViewById<ImageView>(R.id.iconoCosmetico)
+                            val iconoCosmetico = viewItem.findViewById<ImageView>(R.id.iconoCosmetico)
 
                             if (objeto.tipo.equals("icono")) {
                                 txtTitulo.text = objeto.descripcion
@@ -79,7 +80,6 @@ class inventario : Fragment(R.layout.fragment_inventario) {
                                         }
                                     }
                                     (activity as? MainActivity)?.cargarDatosMenuLateral()
-                                    Toast.makeText(requireContext(), "Icono cambiado", Toast.LENGTH_SHORT).show()
                                 }
                             }
                             return viewItem
@@ -87,7 +87,6 @@ class inventario : Fragment(R.layout.fragment_inventario) {
                     }
                 }
             } catch (e: Exception) {
-                Toast.makeText(requireContext(), "Error al cargar datos", Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -59,7 +59,11 @@ class MainActivity : AppCompatActivity() {
                     if(navGraph.currentDestination?.id != R.id.niveles) {
                         if(navGraph.currentDestination?.id == R.id.tienda){
                             navGraph.navigate(R.id.action_global_niveles)
-                        }else if(navGraph.currentDestination?.id == R.id.inventario){
+                        }
+                        if(navGraph.currentDestination?.id == R.id.inventario){
+                            navGraph.navigate(R.id.action_global_niveles)
+                        }
+                        if(navGraph.currentDestination?.id == R.id.cambiarNickname){
                             navGraph.navigate(R.id.action_global_niveles)
                         }
 
@@ -69,7 +73,11 @@ class MainActivity : AppCompatActivity() {
                     if(navGraph.currentDestination?.id != R.id.inventario) {
                         if(navGraph.currentDestination?.id == R.id.niveles){
                             navGraph.navigate(R.id.action_global_inventario)
-                        }else if(navGraph.currentDestination?.id == R.id.tienda){
+                        }
+                        if(navGraph.currentDestination?.id == R.id.tienda){
+                            navGraph.navigate(R.id.action_global_inventario)
+                        }
+                        if(navGraph.currentDestination?.id == R.id.cambiarNickname){
                             navGraph.navigate(R.id.action_global_inventario)
                         }
                     }
@@ -78,8 +86,25 @@ class MainActivity : AppCompatActivity() {
                     if(navGraph.currentDestination?.id != R.id.tienda) {
                         if(navGraph.currentDestination?.id == R.id.niveles){
                             navGraph.navigate(R.id.action_global_tienda)
-                        }else if(navGraph.currentDestination?.id == R.id.inventario){
+                        }
+                        if(navGraph.currentDestination?.id == R.id.inventario){
                             navGraph.navigate(R.id.action_global_tienda)
+                        }
+                        if(navGraph.currentDestination?.id == R.id.tienda){
+                            navGraph.navigate(R.id.action_global_tienda)
+                        }
+                    }
+                }
+                R.id.nav_cambioNickname -> {
+                    if(navGraph.currentDestination?.id != R.id.cambiarNickname) {
+                        if(navGraph.currentDestination?.id == R.id.niveles){
+                            navGraph.navigate(R.id.action_global_cambiarNickname)
+                        }
+                        if(navGraph.currentDestination?.id == R.id.inventario){
+                            navGraph.navigate(R.id.action_global_cambiarNickname)
+                        }
+                        if(navGraph.currentDestination?.id == R.id.tienda){
+                            navGraph.navigate(R.id.action_global_cambiarNickname)
                         }
                     }
                 }

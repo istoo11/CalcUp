@@ -10,9 +10,11 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.calcup.Objetos.Usuario
 import com.example.calcup.R
 import io.github.jan.supabase.auth.auth
 import io.github.jan.supabase.auth.providers.builtin.Email
+import io.github.jan.supabase.postgrest.from
 import kotlinx.coroutines.launch
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
@@ -31,18 +33,17 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             lifecycleScope.launch {
                 try {
                     supabase.auth.signInWith(Email) {
-                        //email = "Romansami40@gmail.com"
-                        //password = "Prueba"
+                        email = "Romansami40@gmail.com"
+                        password = "Prueba"
                         email = correo
                         password = contrasena
                     }
                     val intent = Intent(requireActivity(), com.example.calcup.Activity.MainActivity::class.java)
                     startActivity(intent)
-                    Toast.makeText(requireContext(), "Login Correcto", Toast.LENGTH_SHORT).show()
                     activity?.finish()
                 } catch (e: Exception) {
                     e.printStackTrace()
-                    Toast.makeText(requireContext(), "Comprueba las credenciales o crea una cuenta", Toast.LENGTH_LONG).show()
+                    Toast.makeText(requireContext(), "Compruebe las credenciales o cree una cuenta", Toast.LENGTH_LONG).show()
                 }
             }
         }

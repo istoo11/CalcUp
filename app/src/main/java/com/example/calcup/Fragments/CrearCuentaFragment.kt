@@ -1,5 +1,6 @@
 package com.example.calcup.Fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -50,16 +51,26 @@ class CrearCuentaFragment : Fragment(R.layout.fragment_crear_cuenta) {
                     }
 
                     if (creado != null) {
-                        val usuario = Usuario(creado.id, nickname,  0, 1,0,0)
+                        val usuario = Usuario(creado.id, nickname,  0, 1,0)
                         ClienteSupabase.supabase.from("usuarios").insert(usuario)
                         Toast.makeText(requireContext(), "Usuario creado correctamente", Toast.LENGTH_SHORT).show()
                         findNavController().popBackStack()
                     } else {
-                        Toast.makeText(requireContext(), "Error al rellenar el usuario", Toast.LENGTH_SHORT).show()
+                        AlertDialog.Builder(requireContext())
+                            .setMessage("Compruebe que la contraseña contenga al menos 7 caracteres")
+                            .setPositiveButton("OK") { dialog, _ ->
+                                dialog.dismiss()
+                            }
+                            .show()
                     }
                 } catch (e: Exception) {
                     Log.e("Inicio_sesion", e.toString());
-                    Toast.makeText(requireContext(), "Error al crear el usuario", Toast.LENGTH_LONG).show()
+                    AlertDialog.Builder(requireContext())
+                        .setMessage("El usuario no se ha podido crear")
+                        .setPositiveButton("OK") { dialog, _ ->
+                            dialog.dismiss()
+                        }
+                        .show()
                 }
             }
         }
