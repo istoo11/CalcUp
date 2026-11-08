@@ -24,3 +24,12 @@ Desarrollar una aplicación educativa gamificada donde los usuarios puedan pract
 - Tienda interna donde los usuarios pueden gastar puntos obtenidos
 - Inventario de objetos comprados dentro de la tienda
 - Sistema de feedback en tiempo real (aciertos y errores durante los niveles)
+
+## Demo de la APP
+
+- Usuario: prueba@prueba.com
+- Contraseña: prueba
+
+[Probar CalcUp](https://appetize.io/app/b_ha7sq72kqnuwb3u5cue5qkfwd4)
+
+
