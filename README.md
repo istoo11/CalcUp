@@ -30,6 +30,8 @@ Desarrollar una aplicación educativa gamificada donde los usuarios puedan pract
 - Usuario: prueba@prueba.com
 - Contraseña: prueba
 
-[Probar CalcUp](https://appetize.io/app/b_ha7sq72kqnuwb3u5cue5qkfwd4)
+Puedes probar la aplicación interactiva directamente en [Appetize.io][appetize-demo].
+
+[appetize-demo]: https://appetize.io/app/b_ha7sq72kqnuwb3u5cue5qkfwd4
 
 
